@@ -21,8 +21,8 @@ class board{
         void print();
         void flag (int xpos, int ypos);
         gameStatus status();
-        gameStatus statusChecker();
-        void statusSetter(gameStatus);
+        void statusChecker();
+        //void statusSetter(gameStatus);
         void setPositionsValue(int xpos, int ypos);
         int getPositionsValue(int xpos, int ypos);
         void printing(sf::RenderWindow& screen, int xpos, int ypos, int imageLength);

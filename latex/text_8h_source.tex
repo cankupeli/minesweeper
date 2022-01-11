@@ -1,0 +1,19 @@
+\hypertarget{text_8h_source}{}\doxysection{text.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TEXT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TEXT\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{classtext}{text}}\{}
+\DoxyCodeLine{5     \textcolor{keyword}{public}:}
+\DoxyCodeLine{6         \mbox{\hyperlink{classtext}{text}}();}
+\DoxyCodeLine{7         \textcolor{keywordtype}{void} creation (sf::Font font, sf::Color color, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos, std::string textString = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{8         \textcolor{keywordtype}{void} stringSetter(std::string stringSet);}
+\DoxyCodeLine{9         \textcolor{keywordtype}{void} printing(sf::RenderWindow\& screen);}
+\DoxyCodeLine{10     \textcolor{keyword}{private}:}
+\DoxyCodeLine{11         sf::Font font;}
+\DoxyCodeLine{12         sf::Text textShown;}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,18 +1,15 @@
 #include "interface.h"
 
 void hover(modeButton& currentButton, sf::Vector2i pos){
-    if (currentButton.clickable(pos) && currentButton.status() == button::inactive){
+    if (currentButton.clickable(pos) && currentButton.status() == button::inactive)
         currentButton.setHover();
-    }
-    if (!currentButton.clickable(pos) && currentButton.status() == button::hovered){
+    if (!currentButton.clickable(pos) && currentButton.status() == button::hovered)
         currentButton.setInactive();
-    }
 }
 bool withinBoard (sf::Vector2i pos, int boardXpos, int boardYpos, int tileLength, int amountOfTiles){
     int boardLength = tileLength * amountOfTiles;
-    if (pos.x > boardXpos && pos.y > boardYpos && pos.x < (boardXpos + boardLength) && pos.y < (boardYpos + boardLength)){
+    if (pos.x > boardXpos && pos.y > boardYpos && pos.x < (boardXpos + boardLength) && pos.y < (boardYpos + boardLength))
         return true;
-    }
     return false;
 }
 interface::interface(int screenWidth, int screenHeight, int boardXpos, int boardYpos, int tileLength):screenWidth(screenWidth), screenHeight(screenHeight), boardXpos(boardXpos), boardYpos(boardYpos), tileLength(tileLength), app(sf::VideoMode(screenWidth, screenHeight), "Minesweeper"){
@@ -48,12 +45,13 @@ void interface::update(){
                 app.close();
             if (e.type == sf::Event::MouseButtonReleased){
                 if (withinBoard(pos, boardXpos, boardYpos, tileLength, amountOfTiles)){
-                    if (e.mouseButton.button == sf::Mouse::Left){ //if left click, that cell shows hidden cell
+                    if (e.mouseButton.button == sf::Mouse::Left && minesweeperBoard.status() != gameStatus::won){ //if left click, that cell shows hidden cell
                         minesweeperBoard.setPositionsValue(x,y);
                     }
-                    if (e.mouseButton.button == sf::Mouse::Right){ //if right click, that cell becomes flag 
+                    if (e.mouseButton.button == sf::Mouse::Right && minesweeperBoard.status() != gameStatus::won){ //if right click, that cell becomes flag 
                         minesweeperBoard.flag(x,y);
                     }
+                    minesweeperBoard.statusChecker();
                 }
                 if(e.mouseButton.button == sf::Mouse::Left){
                     if (easyMode.clickable(pos)){
@@ -98,12 +96,9 @@ void interface::print(){
     minesweeperBoard.printing(app, boardXpos, boardYpos, tileLength);  //BOARD
     flagsT.printing(app);
     timerT.printing(app);
-    if (minesweeperBoard.statusChecker()==won){                        //VICTORY
-        minesweeperBoard.statusSetter(won);
+    if (minesweeperBoard.status()==won)                       //VICTORY
         victory.printing(app);
-    }
-    if (minesweeperBoard.statusChecker()==lost){                        //LOST
+    if (minesweeperBoard.status()==lost)                        //LOST
         detonated.printing(app);
-    }
     app.display();
 }

@@ -1,0 +1,102 @@
+\hypertarget{tile_image_determine_8h_source}{}\doxysection{tile\+Image\+Determine.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TILEIMAGEDETERMINE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TILEIMAGEDETERMINE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{struct }\mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} \{}
+\DoxyCodeLine{5     std::string tileImage;}
+\DoxyCodeLine{6     \textcolor{keywordtype}{int} tileValue;}
+\DoxyCodeLine{7     \textcolor{keywordtype}{bool} finished = \textcolor{keyword}{false};}
+\DoxyCodeLine{8     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}}(\textcolor{keywordtype}{int} tileValue):tileValue(tileValue)\{\}}
+\DoxyCodeLine{9     \textcolor{keyword}{operator} std::string()\{}
+\DoxyCodeLine{10         \textcolor{keywordflow}{return} tileImage;}
+\DoxyCodeLine{11     \}}
+\DoxyCodeLine{12     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile0() \{}
+\DoxyCodeLine{13         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 0)\{}
+\DoxyCodeLine{14             tileImage = \textcolor{stringliteral}{"{}images/tile0.png"{}};}
+\DoxyCodeLine{15             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{16         \}}
+\DoxyCodeLine{17         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile1() \{}
+\DoxyCodeLine{20         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 1)\{}
+\DoxyCodeLine{21             tileImage = \textcolor{stringliteral}{"{}images/tile1.png"{}};}
+\DoxyCodeLine{22             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{23         \}}
+\DoxyCodeLine{24         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile2() \{}
+\DoxyCodeLine{27         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 2)\{}
+\DoxyCodeLine{28             tileImage = \textcolor{stringliteral}{"{}images/tile2.png"{}};}
+\DoxyCodeLine{29             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{30         \}}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile3() \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 3)\{}
+\DoxyCodeLine{35             tileImage = \textcolor{stringliteral}{"{}images/tile3.png"{}};}
+\DoxyCodeLine{36             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{37         \}}
+\DoxyCodeLine{38         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile4() \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 4)\{}
+\DoxyCodeLine{42             tileImage = \textcolor{stringliteral}{"{}images/tile4.png"{}};}
+\DoxyCodeLine{43             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile5() \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 5)\{}
+\DoxyCodeLine{49             tileImage = \textcolor{stringliteral}{"{}images/tile5.png"{}};}
+\DoxyCodeLine{50             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile6() \{}
+\DoxyCodeLine{55         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 6)\{}
+\DoxyCodeLine{56             tileImage = \textcolor{stringliteral}{"{}images/tile6.png"{}};}
+\DoxyCodeLine{57             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{60     \}}
+\DoxyCodeLine{61     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile7() \{}
+\DoxyCodeLine{62         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 7)\{}
+\DoxyCodeLine{63             tileImage = \textcolor{stringliteral}{"{}images/tile7.png"{}};}
+\DoxyCodeLine{64             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile8() \{}
+\DoxyCodeLine{69         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 8)\{}
+\DoxyCodeLine{70             tileImage = \textcolor{stringliteral}{"{}images/tile8.png"{}};}
+\DoxyCodeLine{71             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile9() \{}
+\DoxyCodeLine{76         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 9)\{}
+\DoxyCodeLine{77             tileImage = \textcolor{stringliteral}{"{}images/tile9.png"{}};}
+\DoxyCodeLine{78             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{79         \}}
+\DoxyCodeLine{80         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{81     \}}
+\DoxyCodeLine{82     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile10() \{}
+\DoxyCodeLine{83         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 10)\{}
+\DoxyCodeLine{84             tileImage = \textcolor{stringliteral}{"{}images/tile10.png"{}};}
+\DoxyCodeLine{85             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89     \mbox{\hyperlink{structtile_image_determine}{tileImageDetermine}} tile11() \{}
+\DoxyCodeLine{90         \textcolor{keywordflow}{if} (!finished \&\& tileValue == 11)\{}
+\DoxyCodeLine{91             tileImage = \textcolor{stringliteral}{"{}images/tile11.png"{}};}
+\DoxyCodeLine{92             finished = \textcolor{keyword}{true};}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{95     \}}
+\DoxyCodeLine{96 \};}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

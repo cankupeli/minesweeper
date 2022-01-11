@@ -1,6 +1,7 @@
 #include "cell.h"
 
 cell::cell(int valueHidden, int valueShown): valueHidden(valueHidden), valueShown(valueShown), checked(false){}
+//cell::cell(const cell &rhs): valueHidden(rhs.valueHidden), valueShown(rhs.valueShown), checked(rhs.checked) {}
 int cell::getHidden(){
     return valueHidden;
 }

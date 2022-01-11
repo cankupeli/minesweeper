@@ -13,6 +13,7 @@ int main()
     srand(time(0));
     interface game(2200,1400, 950, 150, 50);
     game.update();
+}
     /*board steve;
     steve.generation(easy);
     steve.generationValue();
@@ -162,9 +163,7 @@ int main()
             app.draw(detonated);
         }
         app.display();
-    }*/
 }
-/*
     title.setFont(font);
     title.setCharacterSize(100);
     title.setFillColor(sf::Color::Black);

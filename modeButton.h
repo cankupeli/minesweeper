@@ -1,6 +1,6 @@
 #ifndef MODEBUTTON_H
 #define MODEBUTTON_H
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 #include "board.h"
 enum button{
     active, inactive, hovered
@@ -24,7 +24,7 @@ class modeButton{
         button activity;
         sf::Font font;
         sf::Text buttonText;
-        sf::Texture activeT; // print at xmin, ymin for active button
+        sf::Texture activeT;
         sf::Sprite activeS;
 };
 #endif

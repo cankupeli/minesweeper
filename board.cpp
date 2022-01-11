@@ -1,5 +1,5 @@
 #include "board.h"
-
+#include <algorithm>
 board::board():currentStatus(ongoing){
     backgroundMusic.openFromFile("audio/bck.wav");
 }
@@ -21,14 +21,25 @@ void board::generation(gameDifficulty mode){
     flagsLeft = amountOfMines;
     timer.restart();
     currentStatus = ongoing;
-    for (int i = 0; i < xyCells; i++){
+    gameBoard.resize(xyCells);
+    auto columnGenerator = [this]() {
+        cell temp(0, 10);
+        return temp;
+    };
+    auto rowGenerator = [this, columnGenerator]() {
+        std::vector<cell> column(xyCells);
+        std::generate(column.begin(), column.end(), columnGenerator);
+        return column;
+    };
+    std::generate(gameBoard.begin(), gameBoard.end(), rowGenerator);
+    /*for (int i = 0; i < xyCells; i++){
         std::vector<cell> column;
         for (int i = 0; i < xyCells; i++){
             cell temp(0, 10);
             column.push_back(temp);
         }
         gameBoard.push_back(column);
-    }
+    }*/
 }
 void board::generationValue(){
     for (int i = 0; i < amountOfMines; i++){
@@ -92,54 +103,47 @@ gameStatus board::status(){
 int board::mineAmount(){
     return amountOfMines;
 }
-gameStatus board::statusChecker(){
-    int bombs = 0;
+void board::statusChecker(){
+    int unflippedTiles = 0;
     bool lost = false;
-    for (auto e: gameBoard){
-        for (auto i: e){
-            if (i.getShown() == 10 || i.getShown() == 11){
-                bombs++;
-            }
-            if (i.getShown() == 9)
-                lost = true;
-        }
-    }
-    if (bombs == mineAmount()){
+    auto checkGameStatus = [&unflippedTiles, &lost](cell &c) {
+        if (c.getShown() == 10 || c.getShown() == 11)
+            unflippedTiles++;
+        if (c.getShown() == 9)
+            lost = true;
+    };
+    for (auto e: gameBoard)
+        std::for_each(e.begin(), e.end(), checkGameStatus);
+    if (unflippedTiles == mineAmount()){
         musicStopper();
-        return gameStatus::won;
+        currentStatus = gameStatus::won;
     }
-    if (lost)
-        return gameStatus::lost;
-    return gameStatus::ongoing;
+    else if (lost){
+        musicStopper();
+        currentStatus = gameStatus::lost;
+    }
 }
-void board::statusSetter(gameStatus current){
-    currentStatus = current;
-}
+
 void board::setPositionsValue(int xpos, int ypos){
-    if (!gameBoard[xpos][ypos].isFlag()){
+    if (!gameBoard[xpos][ypos].isFlag())
         gameBoard[xpos][ypos].setShown();
-        if (gameBoard[xpos][ypos].isBomb()){
-            currentStatus = lost;
-            musicStopper();
-        }
-    }
     if (gameBoard[xpos][ypos].getHidden() == 0){
-                if (xpos > 0 && !gameBoard[xpos-1][ypos].getChecked())
-                    setPositionsValue(xpos-1, ypos);
-                if (ypos > 0 && !gameBoard[xpos][ypos-1].getChecked())
-                    setPositionsValue(xpos, ypos-1);
-                if (xpos > 0 && ypos > 0 && !gameBoard[xpos-1][ypos-1].getChecked())
-                    setPositionsValue(xpos-1, ypos-1);
-                if (xpos+1 < xyCells && !gameBoard[xpos+1][ypos].getChecked())
-                    setPositionsValue(xpos+1, ypos);
-                if (ypos+1 < xyCells && !gameBoard[xpos][ypos+1].getChecked())
-                    setPositionsValue(xpos, ypos+1);
-                if (xpos+1 < xyCells && ypos+1 < xyCells && !gameBoard[xpos+1][ypos+1].getChecked())
-                    setPositionsValue(xpos+1, ypos+1);
-                if (xpos > 0 && ypos+1 < xyCells && !gameBoard[xpos-1][ypos+1].getChecked())
-                    setPositionsValue(xpos-1, ypos+1);
-                if (ypos > 0 && xpos+1 < xyCells && !gameBoard[xpos+1][ypos-1].getChecked())
-                    setPositionsValue(xpos+1, ypos-1);
+        if (xpos > 0 && !gameBoard[xpos-1][ypos].getChecked())
+            setPositionsValue(xpos-1, ypos);
+        if (ypos > 0 && !gameBoard[xpos][ypos-1].getChecked())
+            setPositionsValue(xpos, ypos-1);
+        if (xpos > 0 && ypos > 0 && !gameBoard[xpos-1][ypos-1].getChecked())
+            setPositionsValue(xpos-1, ypos-1);
+        if (xpos+1 < xyCells && !gameBoard[xpos+1][ypos].getChecked())
+            setPositionsValue(xpos+1, ypos);
+        if (ypos+1 < xyCells && !gameBoard[xpos][ypos+1].getChecked())
+            setPositionsValue(xpos, ypos+1);
+        if (xpos+1 < xyCells && ypos+1 < xyCells && !gameBoard[xpos+1][ypos+1].getChecked())
+            setPositionsValue(xpos+1, ypos+1);
+        if (xpos > 0 && ypos+1 < xyCells && !gameBoard[xpos-1][ypos+1].getChecked())
+            setPositionsValue(xpos-1, ypos+1);
+        if (ypos > 0 && xpos+1 < xyCells && !gameBoard[xpos+1][ypos-1].getChecked())
+            setPositionsValue(xpos+1, ypos-1);
     }
     return;
 }
