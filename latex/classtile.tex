@@ -2,6 +2,11 @@
 \label{classtile}\index{tile@{tile}}
 
 
+This class is the representation of a double sided tile.  
+
+
+
+
 {\ttfamily \#include $<$tile.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -32,7 +37,7 @@ void \mbox{\hyperlink{classtile_a262aea105acac7475b50afdef31c5c26}{increment}} (
 
 
 \doxysubsection{Detailed Description}
-Representation of a double sided tile. 
+This class is the representation of a double sided tile. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classtile_a294955b8c59ebef580775218e9df6f56}\label{classtile_a294955b8c59ebef580775218e9df6f56}} 
@@ -49,9 +54,9 @@ Default constructor \mbox{\Hypertarget{classtile_a83ea23b887badb97a87d85cadd9fb0
 
 Parameterised constructor 
 \begin{DoxyParams}{Parameters}
-{\em value\+Hidden} & Tile\textquotesingle{}s hidden (true) valuation and type. \\
+{\em value\+Hidden} & Tile\textquotesingle{}s value. \\
 \hline
-{\em value\+Shown} & Tile\textquotesingle{}s visible valuation and type. \\
+{\em value\+Shown} & Tile\textquotesingle{}s displayed value. \\
 \hline
 \end{DoxyParams}
 
@@ -64,7 +69,7 @@ Parameterised constructor
 {\footnotesize\ttfamily int tile\+::get\+Checked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Retrieves the status of the tile; if it has been checked or not. \begin{DoxyReturn}{Returns}
-member\+: checked 
+True if tile has been checked. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtile_a5a9a6f969b0bf4acbb8d97d08071ddd6}\label{classtile_a5a9a6f969b0bf4acbb8d97d08071ddd6}} 
 \index{tile@{tile}!getHidden@{getHidden}}
@@ -72,8 +77,8 @@ member\+: checked
 \doxysubsubsection{\texorpdfstring{getHidden()}{getHidden()}}
 {\footnotesize\ttfamily int tile\+::get\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Retrieves the hidden (true) value of the tile. \begin{DoxyReturn}{Returns}
-member\+: value\+Hidden 
+Retrieves the value of the tile. \begin{DoxyReturn}{Returns}
+The tiles value 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtile_a8b4835efc3d729774320c6ceee59f21f}\label{classtile_a8b4835efc3d729774320c6ceee59f21f}} 
 \index{tile@{tile}!getShown@{getShown}}
@@ -81,8 +86,8 @@ member\+: value\+Hidden
 \doxysubsubsection{\texorpdfstring{getShown()}{getShown()}}
 {\footnotesize\ttfamily int tile\+::get\+Shown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Retrieves the visible value of the tile. \begin{DoxyReturn}{Returns}
-member\+: value\+Shown 
+Retrieves the displayed value of the tile. \begin{DoxyReturn}{Returns}
+The tiles displayed value 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtile_a262aea105acac7475b50afdef31c5c26}\label{classtile_a262aea105acac7475b50afdef31c5c26}} 
 \index{tile@{tile}!increment@{increment}}
@@ -96,8 +101,8 @@ Increments the valuation of the tile\textquotesingle{}s hidden value by 1; \mbox
 \doxysubsubsection{\texorpdfstring{isBomb()}{isBomb()}}
 {\footnotesize\ttfamily bool tile\+::is\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Checks if the tile\textquotesingle{}s shown value is equivalent to that of a bomb. \begin{DoxyReturn}{Returns}
-true if value\+Shown is equivalent to 9 
+Checks if the tile\textquotesingle{}s displayed value is equivalent to that of a bomb. \begin{DoxyReturn}{Returns}
+true if displayed value is a bomb 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtile_ad64a1ddec74c4d53145c7d6342e9dde5}\label{classtile_ad64a1ddec74c4d53145c7d6342e9dde5}} 
 \index{tile@{tile}!isFlag@{isFlag}}
@@ -105,8 +110,8 @@ true if value\+Shown is equivalent to 9
 \doxysubsubsection{\texorpdfstring{isFlag()}{isFlag()}}
 {\footnotesize\ttfamily bool tile\+::is\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Checks if the tile\textquotesingle{}s shown value is equivalent to that of a flag. \begin{DoxyReturn}{Returns}
-true if value\+Shown is equivalent to 11 
+Checks if the tile\textquotesingle{}s displayed value is equivalent to that of a flag. \begin{DoxyReturn}{Returns}
+true if the displayed value is a flag 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classtile_a2b83aa29fb2bf50c1a43e975904ecc1e}\label{classtile_a2b83aa29fb2bf50c1a43e975904ecc1e}} 
 \index{tile@{tile}!setHidden@{setHidden}}
@@ -114,7 +119,7 @@ true if value\+Shown is equivalent to 11
 \doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
 {\footnotesize\ttfamily void tile\+::set\+Hidden (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
 
-Sets the value of tile\textquotesingle{}s hidden valuation. 
+Sets the tiles value. 
 \begin{DoxyParams}{Parameters}
 {\em value} & Value to be set. \\
 \hline
@@ -125,13 +130,13 @@ Sets the value of tile\textquotesingle{}s hidden valuation.
 \doxysubsubsection{\texorpdfstring{setShown()}{setShown()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void tile\+::set\+Shown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Sets the value of tile\textquotesingle{}s shown valuation to equal that of the tile\textquotesingle{}s hidden valuation and set the tile\textquotesingle{}s status to being checked. \mbox{\Hypertarget{classtile_ad747430f150100f63871498f6f5e18db}\label{classtile_ad747430f150100f63871498f6f5e18db}} 
+Sets displayed value to tiles value and sets its status to being checked \mbox{\Hypertarget{classtile_ad747430f150100f63871498f6f5e18db}\label{classtile_ad747430f150100f63871498f6f5e18db}} 
 \index{tile@{tile}!setShown@{setShown}}
 \index{setShown@{setShown}!tile@{tile}}
 \doxysubsubsection{\texorpdfstring{setShown()}{setShown()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void tile\+::set\+Shown (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
 
-Sets the value of tile\textquotesingle{}s shown valuation. 
+Sets the tiles displayed value. 
 \begin{DoxyParams}{Parameters}
 {\em value} & Value to be set. \\
 \hline

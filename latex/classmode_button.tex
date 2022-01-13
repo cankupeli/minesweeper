@@ -2,8 +2,21 @@
 \label{classmode_button}\index{modeButton@{modeButton}}
 
 
+This class is for the buttons used to change the mode of the game.  
+
+
+
+
 {\ttfamily \#include $<$mode\+Button.\+h$>$}
 
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{button}} \{ {\bfseries active}
+, {\bfseries inactive}
+, {\bfseries hovered}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -13,9 +26,9 @@ void \mbox{\hyperlink{classmode_button_aa6a0557c5694099a414267e5a6155930}{creati
 \item 
 bool \mbox{\hyperlink{classmode_button_acaa6ede510ac9a598da14f2ef0dc7af4}{clickable}} (sf\+::\+Vector2i pos)
 \item 
-void \mbox{\hyperlink{classmode_button_a874a4d29b84b49d93064da6ec771fcd3}{activation}} (\mbox{\hyperlink{classboard}{board}} \&\mbox{\hyperlink{classboard}{board}}, game\+Difficulty difficulty)
+void \mbox{\hyperlink{classmode_button_a65003145c0b7f8926d902ef3bf7ff96f}{activation}} (\mbox{\hyperlink{classboard}{board}} \&\mbox{\hyperlink{classboard}{board}}, \mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{board\+::game\+Difficulty}} difficulty)
 \item 
-button \mbox{\hyperlink{classmode_button_a4a21448a9a4a8de3f959597e0949cd73}{status}} ()
+\mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{button}} \mbox{\hyperlink{classmode_button_a7bcead54d099ee10b29790646e35e2e5}{status}} ()
 \item 
 void \mbox{\hyperlink{classmode_button_aa4ae997cbb7b839ceea5f186670fa128}{set\+Hover}} ()
 \item 
@@ -28,7 +41,16 @@ void \mbox{\hyperlink{classmode_button_a0cf0c6a5e0353f84851210f1b813d533}{printi
 
 
 \doxysubsection{Detailed Description}
-This class is for the buttons used to change the mode of the game 
+This class is for the buttons used to change the mode of the game. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmode_button_a1c2c5178bb5b49eb0576b29751030972}\label{classmode_button_a1c2c5178bb5b49eb0576b29751030972}} 
+\index{modeButton@{modeButton}!button@{button}}
+\index{button@{button}!modeButton@{modeButton}}
+\doxysubsubsection{\texorpdfstring{button}{button}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{mode\+Button\+::button}}}
+
+Enums for the status of a button 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmode_button_a527646c52b879cdc5b603db74a5433a4}\label{classmode_button_a527646c52b879cdc5b603db74a5433a4}} 
@@ -40,11 +62,11 @@ This class is for the buttons used to change the mode of the game
 Default constructor 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classmode_button_a874a4d29b84b49d93064da6ec771fcd3}\label{classmode_button_a874a4d29b84b49d93064da6ec771fcd3}} 
+\mbox{\Hypertarget{classmode_button_a65003145c0b7f8926d902ef3bf7ff96f}\label{classmode_button_a65003145c0b7f8926d902ef3bf7ff96f}} 
 \index{modeButton@{modeButton}!activation@{activation}}
 \index{activation@{activation}!modeButton@{modeButton}}
 \doxysubsubsection{\texorpdfstring{activation()}{activation()}}
-{\footnotesize\ttfamily void mode\+Button\+::activation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classboard}{board}} \&}]{board,  }\item[{game\+Difficulty}]{difficulty }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void mode\+Button\+::activation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classboard}{board}} \&}]{board,  }\item[{\mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{board\+::game\+Difficulty}}}]{difficulty }\end{DoxyParamCaption})}
 
 Handles the activation of a click 
 \begin{DoxyParams}{Parameters}
@@ -73,7 +95,7 @@ True if button is clickable
 \doxysubsubsection{\texorpdfstring{creation()}{creation()}}
 {\footnotesize\ttfamily void mode\+Button\+::creation (\begin{DoxyParamCaption}\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{int}]{xmin,  }\item[{int}]{xmax,  }\item[{int}]{ymin,  }\item[{int}]{ymax,  }\item[{int}]{size,  }\item[{std\+::string}]{text,  }\item[{std\+::string}]{active\+Image }\end{DoxyParamCaption})}
 
-Applys the customization and positioning of the button 
+Applies the customization and positioning of the button 
 \begin{DoxyParams}{Parameters}
 {\em xpos} & x-\/position of the button \\
 \hline
@@ -123,14 +145,14 @@ Sets the status of the button to hover \mbox{\Hypertarget{classmode_button_a93f3
 \doxysubsubsection{\texorpdfstring{setInactive()}{setInactive()}}
 {\footnotesize\ttfamily void mode\+Button\+::set\+Inactive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Sets the status of the button to inactive \mbox{\Hypertarget{classmode_button_a4a21448a9a4a8de3f959597e0949cd73}\label{classmode_button_a4a21448a9a4a8de3f959597e0949cd73}} 
+Sets the status of the button to inactive \mbox{\Hypertarget{classmode_button_a7bcead54d099ee10b29790646e35e2e5}\label{classmode_button_a7bcead54d099ee10b29790646e35e2e5}} 
 \index{modeButton@{modeButton}!status@{status}}
 \index{status@{status}!modeButton@{modeButton}}
 \doxysubsubsection{\texorpdfstring{status()}{status()}}
-{\footnotesize\ttfamily button mode\+Button\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{mode\+Button\+::button}} mode\+Button\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Gets the status of the button \begin{DoxyReturn}{Returns}
-activity 
+Gets the status of the button (active, inactive and hovered) \begin{DoxyReturn}{Returns}
+Button\textquotesingle{}s status 
 \end{DoxyReturn}
 
 

@@ -1,21 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "abcdfgimpst",
+  0: "abcdfgimopstu",
   1: "bimt",
-  2: "abcdfgimpst"
+  2: "abcdfgimopstu",
+  3: "bg"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "functions",
+  3: "enums"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Functions"
+  2: "Functions",
+  3: "Enumerations"
 };
 

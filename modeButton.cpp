@@ -25,13 +25,13 @@ bool modeButton::clickable(sf::Vector2i pos){
     else
         return false;
 }
-void modeButton::activation(board& board, gameDifficulty difficulty){
+void modeButton::activation(board& board, board::gameDifficulty difficulty){
     activity = active;
     buttonText.setFillColor(sf::Color::White);
     board.generation(difficulty);
     board.generationValue();
 }
-button modeButton::status(){
+modeButton::button modeButton::status(){
     return activity;
 }
 void modeButton::setHover(){

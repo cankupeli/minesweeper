@@ -1,23 +1,23 @@
 #ifndef MODEBUTTON_H
 #define MODEBUTTON_H
 #include "board.h"
-/**
- * Enums for the status of a button
- */
-enum button{
-    active, inactive, hovered
-};
-/**
- * This class is for the buttons used to change the mode of the game
- */
+
+
+//! This class is for the buttons used to change the mode of the game
 class modeButton{
     public:
+        /**
+         * Enums for the status of a button
+         */
+        enum button{
+            active, inactive, hovered
+        };
         /**
          * Default constructor
          */
         modeButton(){};
         /**
-         * Applys the customization and positioning of the button
+         * Applies the customization and positioning of the button
          * @param xpos x-position of the button
          * @param ypos y-position of the button
          * @param xmin Minimum x-boundry for buttons clickability
@@ -40,10 +40,10 @@ class modeButton{
          * @param board The board game to be regenerated
          * @param difficulty The difficulty for the board to be generated with
          */
-        void activation(board& board, gameDifficulty difficulty);
+        void activation(board& board, board::gameDifficulty difficulty);
         /**
-         * Gets the status of the button 
-         * @returns activity
+         * Gets the status of the button (active, inactive and hovered)
+         * @returns Button's status 
          */
         button status();
         /**

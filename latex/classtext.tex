@@ -2,6 +2,11 @@
 \label{classtext}\index{text@{text}}
 
 
+This class handles the creation and displaying of all text on the window.  
+
+
+
+
 {\ttfamily \#include $<$text.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
@@ -9,7 +14,7 @@
 \item 
 \mbox{\hyperlink{classtext_a14339f5c8f5e1fb023f0e68bf5685247}{text}} ()
 \item 
-void \mbox{\hyperlink{classtext_a232e0be40cdb0b82750134327fb400ac}{creation}} (sf\+::\+Font font, sf\+::\+Color color, int size, int xpos, int ypos, std\+::string text\+String=\char`\"{}\char`\"{})
+void \mbox{\hyperlink{classtext_ac94a91be8fa3adbd86a2dd2eba47b8d8}{creation}} (sf\+::\+Font \&font, sf\+::\+Color color, int size, int xpos, int ypos, std\+::string text\+String=\char`\"{}\char`\"{})
 \item 
 void \mbox{\hyperlink{classtext_ad560d7230bac8068f00494500ce245df}{string\+Setter}} (std\+::string string\+Set)
 \item 
@@ -30,25 +35,25 @@ This class handles the creation and displaying of all text on the window.
 Default constructor. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classtext_a232e0be40cdb0b82750134327fb400ac}\label{classtext_a232e0be40cdb0b82750134327fb400ac}} 
+\mbox{\Hypertarget{classtext_ac94a91be8fa3adbd86a2dd2eba47b8d8}\label{classtext_ac94a91be8fa3adbd86a2dd2eba47b8d8}} 
 \index{text@{text}!creation@{creation}}
 \index{creation@{creation}!text@{text}}
 \doxysubsubsection{\texorpdfstring{creation()}{creation()}}
-{\footnotesize\ttfamily void text\+::creation (\begin{DoxyParamCaption}\item[{sf\+::\+Font}]{font,  }\item[{sf\+::\+Color}]{color,  }\item[{int}]{size,  }\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{std\+::string}]{text\+String = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void text\+::creation (\begin{DoxyParamCaption}\item[{sf\+::\+Font \&}]{font,  }\item[{sf\+::\+Color}]{color,  }\item[{int}]{size,  }\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{std\+::string}]{text\+String = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
-Applys customazation to the text and sets the texts on screen position. 
+Applies customazation to the text and sets the texts on screen position. 
 \begin{DoxyParams}{Parameters}
-{\em font} & the font to be applied on the text \\
+{\em font} & The font to be applied on the text \\
 \hline
-{\em color} & the color to be applied on the text \\
+{\em color} & The color to be applied on the text \\
 \hline
-{\em size} & the size to be applied on the text \\
+{\em size} & The size to be applied on the text \\
 \hline
-{\em xpos} & the x-\/position of the texts screen placement \\
+{\em xpos} & The x-\/position of the texts screen placement \\
 \hline
-{\em ypos} & the y-\/position of the texts screen placement \\
+{\em ypos} & The y-\/position of the texts screen placement \\
 \hline
-{\em text\+String} & the string to be set on the text \\
+{\em text\+String} & The string to be set on the text \\
 \hline
 \end{DoxyParams}
 \begin{DoxyAttention}{Attention}
@@ -60,9 +65,9 @@ If no string is given the string will be empty by default
 \doxysubsubsection{\texorpdfstring{printing()}{printing()}}
 {\footnotesize\ttfamily void text\+::printing (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{screen }\end{DoxyParamCaption})}
 
-prints the text to a screen 
+Prints the text to a screen 
 \begin{DoxyParams}{Parameters}
-{\em screen} & the screen text will be printed to \\
+{\em screen} & The screen text will be printed to \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classtext_ad560d7230bac8068f00494500ce245df}\label{classtext_ad560d7230bac8068f00494500ce245df}} 

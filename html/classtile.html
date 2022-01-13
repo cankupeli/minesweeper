@@ -69,6 +69,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class is the representation of a double sided tile.  
+ <a href="classtile.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="tile_8h_source.html">tile.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -97,7 +100,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a262aea105acac7475b50afdef31c5c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Representation of a double sided tile. </p>
+<div class="textblock"><p >This class is the representation of a double sided tile. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a294955b8c59ebef580775218e9df6f56" name="a294955b8c59ebef580775218e9df6f56"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a294955b8c59ebef580775218e9df6f56">&#9670;&nbsp;</a></span>tile() <span class="overload">[1/2]</span></h2>
@@ -152,8 +155,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >Parameterised constructor </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">valueHidden</td><td>Tile's hidden (true) valuation and type. </td></tr>
-    <tr><td class="paramname">valueShown</td><td>Tile's visible valuation and type. </td></tr>
+    <tr><td class="paramname">valueHidden</td><td>Tile's value. </td></tr>
+    <tr><td class="paramname">valueShown</td><td>Tile's displayed value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -175,7 +178,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Retrieves the status of the tile; if it has been checked or not. </p><dl class="section return"><dt>Returns</dt><dd>member: checked </dd></dl>
+<p >Retrieves the status of the tile; if it has been checked or not. </p><dl class="section return"><dt>Returns</dt><dd>True if tile has been checked. </dd></dl>
 
 </div>
 </div>
@@ -193,7 +196,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Retrieves the hidden (true) value of the tile. </p><dl class="section return"><dt>Returns</dt><dd>member: valueHidden </dd></dl>
+<p >Retrieves the value of the tile. </p><dl class="section return"><dt>Returns</dt><dd>The tiles value </dd></dl>
 
 </div>
 </div>
@@ -211,7 +214,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Retrieves the visible value of the tile. </p><dl class="section return"><dt>Returns</dt><dd>member: valueShown </dd></dl>
+<p >Retrieves the displayed value of the tile. </p><dl class="section return"><dt>Returns</dt><dd>The tiles displayed value </dd></dl>
 
 </div>
 </div>
@@ -247,7 +250,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Checks if the tile's shown value is equivalent to that of a bomb. </p><dl class="section return"><dt>Returns</dt><dd>true if valueShown is equivalent to 9 </dd></dl>
+<p >Checks if the tile's displayed value is equivalent to that of a bomb. </p><dl class="section return"><dt>Returns</dt><dd>true if displayed value is a bomb </dd></dl>
 
 </div>
 </div>
@@ -265,7 +268,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Checks if the tile's shown value is equivalent to that of a flag. </p><dl class="section return"><dt>Returns</dt><dd>true if valueShown is equivalent to 11 </dd></dl>
+<p >Checks if the tile's displayed value is equivalent to that of a flag. </p><dl class="section return"><dt>Returns</dt><dd>true if the displayed value is a flag </dd></dl>
 
 </div>
 </div>
@@ -284,7 +287,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the value of tile's hidden valuation. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Sets the tiles value. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>Value to be set. </td></tr>
   </table>
@@ -307,7 +310,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the value of tile's shown valuation to equal that of the tile's hidden valuation and set the tile's status to being checked. </p>
+<p >Sets displayed value to tiles value and sets its status to being checked </p>
 
 </div>
 </div>
@@ -326,7 +329,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Sets the value of tile's shown valuation. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Sets the tiles displayed value. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>Value to be set. </td></tr>
   </table>

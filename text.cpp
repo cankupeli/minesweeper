@@ -1,7 +1,7 @@
 #include "text.h"
 
 text::text(){};
-void text::creation (sf::Font font, sf::Color color, int size, int xpos, int ypos, std::string textString){
+void text::creation (sf::Font& font, sf::Color color, int size, int xpos, int ypos, std::string textString){
     this->font = font;
     textShown.setFont(this->font);
     textShown.setStyle(sf::Text::Bold);

@@ -69,14 +69,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class handles the creation and displaying of all text on the window.  
+ <a href="classtext.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="text_8h_source.html">text.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14339f5c8f5e1fb023f0e68bf5685247"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtext.html#a14339f5c8f5e1fb023f0e68bf5685247">text</a> ()</td></tr>
 <tr class="separator:a14339f5c8f5e1fb023f0e68bf5685247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a232e0be40cdb0b82750134327fb400ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtext.html#a232e0be40cdb0b82750134327fb400ac">creation</a> (sf::Font font, sf::Color color, int size, int xpos, int ypos, std::string textString=&quot;&quot;)</td></tr>
-<tr class="separator:a232e0be40cdb0b82750134327fb400ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94a91be8fa3adbd86a2dd2eba47b8d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtext.html#ac94a91be8fa3adbd86a2dd2eba47b8d8">creation</a> (sf::Font &amp;font, sf::Color color, int size, int xpos, int ypos, std::string textString=&quot;&quot;)</td></tr>
+<tr class="separator:ac94a91be8fa3adbd86a2dd2eba47b8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad560d7230bac8068f00494500ce245df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtext.html#ad560d7230bac8068f00494500ce245df">stringSetter</a> (std::string stringSet)</td></tr>
 <tr class="separator:ad560d7230bac8068f00494500ce245df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f6e9829eb472217329ba5a59153e3ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtext.html#a5f6e9829eb472217329ba5a59153e3ca">printing</a> (sf::RenderWindow &amp;screen)</td></tr>
@@ -104,8 +107,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a232e0be40cdb0b82750134327fb400ac" name="a232e0be40cdb0b82750134327fb400ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a232e0be40cdb0b82750134327fb400ac">&#9670;&nbsp;</a></span>creation()</h2>
+<a id="ac94a91be8fa3adbd86a2dd2eba47b8d8" name="ac94a91be8fa3adbd86a2dd2eba47b8d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94a91be8fa3adbd86a2dd2eba47b8d8">&#9670;&nbsp;</a></span>creation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,7 +116,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void text::creation </td>
           <td>(</td>
-          <td class="paramtype">sf::Font&#160;</td>
+          <td class="paramtype">sf::Font &amp;&#160;</td>
           <td class="paramname"><em>font</em>, </td>
         </tr>
         <tr>
@@ -153,14 +156,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Applys customazation to the text and sets the texts on screen position. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Applies customazation to the text and sets the texts on screen position. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">font</td><td>the font to be applied on the text </td></tr>
-    <tr><td class="paramname">color</td><td>the color to be applied on the text </td></tr>
-    <tr><td class="paramname">size</td><td>the size to be applied on the text </td></tr>
-    <tr><td class="paramname">xpos</td><td>the x-position of the texts screen placement </td></tr>
-    <tr><td class="paramname">ypos</td><td>the y-position of the texts screen placement </td></tr>
-    <tr><td class="paramname">textString</td><td>the string to be set on the text </td></tr>
+    <tr><td class="paramname">font</td><td>The font to be applied on the text </td></tr>
+    <tr><td class="paramname">color</td><td>The color to be applied on the text </td></tr>
+    <tr><td class="paramname">size</td><td>The size to be applied on the text </td></tr>
+    <tr><td class="paramname">xpos</td><td>The x-position of the texts screen placement </td></tr>
+    <tr><td class="paramname">ypos</td><td>The y-position of the texts screen placement </td></tr>
+    <tr><td class="paramname">textString</td><td>The string to be set on the text </td></tr>
   </table>
   </dd>
 </dl>
@@ -183,9 +186,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >prints the text to a screen </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Prints the text to a screen </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">screen</td><td>the screen text will be printed to </td></tr>
+    <tr><td class="paramname">screen</td><td>The screen text will be printed to </td></tr>
   </table>
   </dd>
 </dl>

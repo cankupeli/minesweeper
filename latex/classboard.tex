@@ -2,34 +2,46 @@
 \label{classboard}\index{board@{board}}
 
 
+This class is the board game container which handles the boards creation, its components and it\textquotesingle{}s interactions.  
+
+
+
+
 {\ttfamily \#include $<$board.\+h$>$}
 
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{game\+Difficulty}} \{ {\bfseries easy}
+, {\bfseries medium}
+, {\bfseries hard}
+ \}
+\item 
+enum \mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{game\+Status}} \{ {\bfseries ongoing}
+, {\bfseries lost}
+, {\bfseries won}
+ \}
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classboard_a2a97f34e7c9ed8ace6a2508bb2c6e2a2}{board}} ()
 \item 
-void \mbox{\hyperlink{classboard_a78c380bcd5dd7713da04768d40d3798d}{generation}} (game\+Difficulty mode)
+void \mbox{\hyperlink{classboard_a78c380bcd5dd7713da04768d40d3798d}{generation}} (\mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{game\+Difficulty}} mode)
 \item 
 void \mbox{\hyperlink{classboard_a071d76b15cd7bc2a927c35b6e7bc5f76}{generation\+Value}} ()
 \item 
-void \mbox{\hyperlink{classboard_a5762ccb7f4c0082b5afbe43cd13cd44a}{print}} ()
-\item 
 void \mbox{\hyperlink{classboard_a63879054d8df8c3002e83807f4fbb783}{flag}} (int xpos, int ypos)
 \item 
-game\+Status \mbox{\hyperlink{classboard_a4e1fa37f9415a3c242de48ab5898571d}{status}} ()
+\mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{game\+Status}} \mbox{\hyperlink{classboard_a8a4074d7e3fad4fdd6e27f31b1d95b73}{status}} ()
 \item 
-void \mbox{\hyperlink{classboard_a43e6380695933868bc2d96ff5ed84b7a}{status\+Checker}} ()
+void \mbox{\hyperlink{classboard_af2370b01c49c50d5c01de7e6db6c4aad}{update}} ()
 \item 
 void \mbox{\hyperlink{classboard_a33b27877c28796846a79a528678fc087}{set\+Positions\+Value}} (int xpos, int ypos)
-\item 
-int \mbox{\hyperlink{classboard_a93802e1b17033d8c467610999b63d0f5}{get\+Positions\+Value}} (int xpos, int ypos)
 \item 
 void \mbox{\hyperlink{classboard_afb37814d12ddfa1baa6bb8de42eb7501}{printing}} (sf\+::\+Render\+Window \&screen, int xpos, int ypos, int image\+Length)
 \item 
 int \mbox{\hyperlink{classboard_ac4d339d4800835ab5e6760a86dd88d25}{size}} ()
-\item 
-int \mbox{\hyperlink{classboard_a5fcf328582ecf990efe4d77e4487dd5b}{mine\+Amount}} ()
 \item 
 std\+::string \mbox{\hyperlink{classboard_a868911a206c15ee5633ffb4fae3f0532}{flag}} ()
 \item 
@@ -38,7 +50,22 @@ std\+::string \mbox{\hyperlink{classboard_ab99cb51e374f95423bef5ad666886c73}{tim
 
 
 \doxysubsection{Detailed Description}
-This class is the board game container which handles the boards creation, its components and it\textquotesingle{}s interactions 
+This class is the board game container which handles the boards creation, its components and it\textquotesingle{}s interactions. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classboard_adfc04d9e25cb27900b18770e5c489042}\label{classboard_adfc04d9e25cb27900b18770e5c489042}} 
+\index{board@{board}!gameDifficulty@{gameDifficulty}}
+\index{gameDifficulty@{gameDifficulty}!board@{board}}
+\doxysubsubsection{\texorpdfstring{gameDifficulty}{gameDifficulty}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{board\+::game\+Difficulty}}}
+
+Enum for the difficulty setting of the board \mbox{\Hypertarget{classboard_a40c0ec610c62fa56ebf28be308f32c48}\label{classboard_a40c0ec610c62fa56ebf28be308f32c48}} 
+\index{board@{board}!gameStatus@{gameStatus}}
+\index{gameStatus@{gameStatus}!board@{board}}
+\doxysubsubsection{\texorpdfstring{gameStatus}{gameStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{board\+::game\+Status}}}
+
+Enum for the status of the board 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classboard_a2a97f34e7c9ed8ace6a2508bb2c6e2a2}\label{classboard_a2a97f34e7c9ed8ace6a2508bb2c6e2a2}} 
@@ -57,7 +84,7 @@ Default constructor
 {\footnotesize\ttfamily std\+::string board\+::flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Gets the amount of available flags \begin{DoxyReturn}{Returns}
-flags\+Left as a string 
+amount of flag 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classboard_a63879054d8df8c3002e83807f4fbb783}\label{classboard_a63879054d8df8c3002e83807f4fbb783}} 
 \index{board@{board}!flag@{flag}}
@@ -76,11 +103,11 @@ Flags or unflags a tile
 \index{board@{board}!generation@{generation}}
 \index{generation@{generation}!board@{board}}
 \doxysubsubsection{\texorpdfstring{generation()}{generation()}}
-{\footnotesize\ttfamily void board\+::generation (\begin{DoxyParamCaption}\item[{game\+Difficulty}]{mode }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void board\+::generation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{game\+Difficulty}}}]{mode }\end{DoxyParamCaption})}
 
 Generates base container for board game with default unaltered tiles 
 \begin{DoxyParams}{Parameters}
-{\em mode} & difficulty setting for board game \\
+{\em mode} & Difficulty setting for board game \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classboard_a071d76b15cd7bc2a927c35b6e7bc5f76}\label{classboard_a071d76b15cd7bc2a927c35b6e7bc5f76}} 
@@ -89,41 +116,10 @@ Generates base container for board game with default unaltered tiles
 \doxysubsubsection{\texorpdfstring{generationValue()}{generationValue()}}
 {\footnotesize\ttfamily void board\+::generation\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Generates bombs and corrosponding values surround said bomb for the containers tiles \begin{DoxyNote}{Note}
-The amoune of bombs generate is decided by the size of the container, see \mbox{\hyperlink{classboard_a78c380bcd5dd7713da04768d40d3798d}{board\+::generation()}} 
+Generates bombs and adjusts the value of surrounding tiles \begin{DoxyNote}{Note}
+The number of bombs generated is determined by the boards difficulty, more specifically the size of the container; see \mbox{\hyperlink{classboard_a78c380bcd5dd7713da04768d40d3798d}{board\+::generation()}} 
 \end{DoxyNote}
-\mbox{\Hypertarget{classboard_a93802e1b17033d8c467610999b63d0f5}\label{classboard_a93802e1b17033d8c467610999b63d0f5}} 
-\index{board@{board}!getPositionsValue@{getPositionsValue}}
-\index{getPositionsValue@{getPositionsValue}!board@{board}}
-\doxysubsubsection{\texorpdfstring{getPositionsValue()}{getPositionsValue()}}
-{\footnotesize\ttfamily int board\+::get\+Positions\+Value (\begin{DoxyParamCaption}\item[{int}]{xpos,  }\item[{int}]{ypos }\end{DoxyParamCaption})}
-
-Gets the shown valuation of a tile 
-\begin{DoxyParams}{Parameters}
-{\em xpos} & x-\/position of the tile \\
-\hline
-{\em ypos} & y-\/position of the tile \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The shown valuation of the tile 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classboard_a5fcf328582ecf990efe4d77e4487dd5b}\label{classboard_a5fcf328582ecf990efe4d77e4487dd5b}} 
-\index{board@{board}!mineAmount@{mineAmount}}
-\index{mineAmount@{mineAmount}!board@{board}}
-\doxysubsubsection{\texorpdfstring{mineAmount()}{mineAmount()}}
-{\footnotesize\ttfamily int board\+::mine\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Gets the total number of bombs on the board \begin{DoxyReturn}{Returns}
-amount\+Of\+Mines 
-\end{DoxyReturn}
-\mbox{\Hypertarget{classboard_a5762ccb7f4c0082b5afbe43cd13cd44a}\label{classboard_a5762ccb7f4c0082b5afbe43cd13cd44a}} 
-\index{board@{board}!print@{print}}
-\index{print@{print}!board@{board}}
-\doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void board\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Prints the hidden values of the board game to the terminal \mbox{\Hypertarget{classboard_afb37814d12ddfa1baa6bb8de42eb7501}\label{classboard_afb37814d12ddfa1baa6bb8de42eb7501}} 
+\mbox{\Hypertarget{classboard_afb37814d12ddfa1baa6bb8de42eb7501}\label{classboard_afb37814d12ddfa1baa6bb8de42eb7501}} 
 \index{board@{board}!printing@{printing}}
 \index{printing@{printing}!board@{board}}
 \doxysubsubsection{\texorpdfstring{printing()}{printing()}}
@@ -137,7 +133,7 @@ Prints the board to a screen
 \hline
 {\em ypos} & y-\/position of the tile \\
 \hline
-{\em image\+Length} & length of tile image, in pixels \\
+{\em image\+Length} & Length of tile image, in pixels \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classboard_a33b27877c28796846a79a528678fc087}\label{classboard_a33b27877c28796846a79a528678fc087}} 
@@ -146,7 +142,7 @@ Prints the board to a screen
 \doxysubsubsection{\texorpdfstring{setPositionsValue()}{setPositionsValue()}}
 {\footnotesize\ttfamily void board\+::set\+Positions\+Value (\begin{DoxyParamCaption}\item[{int}]{xpos,  }\item[{int}]{ypos }\end{DoxyParamCaption})}
 
-Sets the shown valuation of the tile to equal that of it\textquotesingle{}s hidden counter-\/part 
+Flips the tile to show the tiles true value 
 \begin{DoxyParams}{Parameters}
 {\em xpos} & x-\/position of the tile \\
 \hline
@@ -159,34 +155,40 @@ Sets the shown valuation of the tile to equal that of it\textquotesingle{}s hidd
 \doxysubsubsection{\texorpdfstring{size()}{size()}}
 {\footnotesize\ttfamily int board\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Gets the size of the board as amount of tiles per side \begin{DoxyReturn}{Returns}
-xy\+Cells 
+Gets the size of the board as the amount of tiles per side \begin{DoxyReturn}{Returns}
+The width/height of the board 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classboard_a4e1fa37f9415a3c242de48ab5898571d}\label{classboard_a4e1fa37f9415a3c242de48ab5898571d}} 
+\begin{DoxyNote}{Note}
+The width and height will always be the same 
+\end{DoxyNote}
+\mbox{\Hypertarget{classboard_a8a4074d7e3fad4fdd6e27f31b1d95b73}\label{classboard_a8a4074d7e3fad4fdd6e27f31b1d95b73}} 
 \index{board@{board}!status@{status}}
 \index{status@{status}!board@{board}}
 \doxysubsubsection{\texorpdfstring{status()}{status()}}
-{\footnotesize\ttfamily game\+Status board\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{board\+::game\+Status}} board\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Gets the status of the board game \begin{DoxyReturn}{Returns}
-status of the board game 
+Gets the status of the board game (ongoing, lost, won), see enum\+::game\+Status \begin{DoxyReturn}{Returns}
+The status of the board game 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classboard_a43e6380695933868bc2d96ff5ed84b7a}\label{classboard_a43e6380695933868bc2d96ff5ed84b7a}} 
-\index{board@{board}!statusChecker@{statusChecker}}
-\index{statusChecker@{statusChecker}!board@{board}}
-\doxysubsubsection{\texorpdfstring{statusChecker()}{statusChecker()}}
-{\footnotesize\ttfamily void board\+::status\+Checker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Updates the status of the board game \mbox{\Hypertarget{classboard_ab99cb51e374f95423bef5ad666886c73}\label{classboard_ab99cb51e374f95423bef5ad666886c73}} 
+\mbox{\Hypertarget{classboard_ab99cb51e374f95423bef5ad666886c73}\label{classboard_ab99cb51e374f95423bef5ad666886c73}} 
 \index{board@{board}!time@{time}}
 \index{time@{time}!board@{board}}
 \doxysubsubsection{\texorpdfstring{time()}{time()}}
 {\footnotesize\ttfamily std\+::string board\+::time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Gets the amount of time the board has been active \begin{DoxyReturn}{Returns}
-timer 
+Gets the length of time the boards current session has been active \begin{DoxyReturn}{Returns}
+The time 
 \end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The time of the current session stops increasing at victory or defeat. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classboard_af2370b01c49c50d5c01de7e6db6c4aad}\label{classboard_af2370b01c49c50d5c01de7e6db6c4aad}} 
+\index{board@{board}!update@{update}}
+\index{update@{update}!board@{board}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void board\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Updates the status of the board game 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

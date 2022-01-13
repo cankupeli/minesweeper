@@ -1,8 +1,6 @@
 #ifndef TILE_H
 #define TILE_H
-/**
- * Representation of a double sided tile.
- */
+//! This class is the representation of a double sided tile.
 class tile{
     public:
         /**
@@ -11,47 +9,47 @@ class tile{
         tile(){};
         /**
         * Parameterised constructor
-        * @param valueHidden Tile's hidden (true) valuation and type.
-        * @param valueShown Tile's visible valuation and type.
+        * @param valueHidden Tile's value.
+        * @param valueShown Tile's displayed value.
         */
         tile(int valueHidden, int valueShown);
         /**
-        * Retrieves the hidden (true) value of the tile.
-        * @return member: valueHidden
+        * Retrieves the value of the tile.
+        * @returns The tiles value
         */
         int getHidden();
         /**
-        * Retrieves the visible value of the tile.
-        * @return member: valueShown
+        * Retrieves the displayed value of the tile.
+        * @return The tiles displayed value
         */
         int getShown();
         /**
         * Retrieves the status of the tile; if it has been checked or not.
-        * @return member: checked
+        * @returns True if tile has been checked.
         */
         int getChecked();
         /**
-        * Checks if the tile's shown value is equivalent to that of a flag.
-        * @return true if valueShown is equivalent to 11
+        * Checks if the tile's displayed value is equivalent to that of a flag.
+        * @return true if the displayed value is a flag
         */
         bool isFlag();
         /**
-        * Checks if the tile's shown value is equivalent to that of a bomb.
-        * @return true if valueShown is equivalent to 9
+        * Checks if the tile's displayed value is equivalent to that of a bomb.
+        * @return true if displayed value is a bomb
         */
         bool isBomb();
         /**
-        * Sets the value of tile's hidden valuation.
+        * Sets the tiles value.
         * @param value Value to be set.
         */
         void setHidden(int value);
         /**
-        * Sets the value of tile's shown valuation.
+        * Sets the tiles displayed value.
         * @param value Value to be set.
         */
         void setShown(int value);
         /**
-        * Sets the value of tile's shown valuation to equal that of the tile's hidden valuation and set the tile's status to being checked.
+        * Sets displayed value to tiles value and sets its status to being checked
         */
         void setShown();
         /**

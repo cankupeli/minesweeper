@@ -4,16 +4,18 @@
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MODEBUTTON\_H}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#define MODEBUTTON\_H}}
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}board.h"{}}}
-\DoxyCodeLine{7 \textcolor{keyword}{enum} button\{}
-\DoxyCodeLine{8     active, inactive, hovered}
-\DoxyCodeLine{9 \};}
-\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classmode_button}{modeButton}}\{}
-\DoxyCodeLine{14     \textcolor{keyword}{public}:}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classmode_button}{modeButton}}\{}
+\DoxyCodeLine{8     \textcolor{keyword}{public}:}
+\DoxyCodeLine{12         \textcolor{keyword}{enum} \mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{button}}\{}
+\DoxyCodeLine{13             active, inactive, hovered}
+\DoxyCodeLine{14         \};}
 \DoxyCodeLine{18         \mbox{\hyperlink{classmode_button_a527646c52b879cdc5b603db74a5433a4}{modeButton}}()\{\};}
 \DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmode_button_aa6a0557c5694099a414267e5a6155930}{creation}}(\textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos, \textcolor{keywordtype}{int} xmin, \textcolor{keywordtype}{int} xmax, \textcolor{keywordtype}{int} ymin, \textcolor{keywordtype}{int} ymax, \textcolor{keywordtype}{int} size, std::string \mbox{\hyperlink{classtext}{text}}, std::string activeImage);}
 \DoxyCodeLine{37         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classmode_button_acaa6ede510ac9a598da14f2ef0dc7af4}{clickable}}(sf::Vector2i pos);}
-\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmode_button_a874a4d29b84b49d93064da6ec771fcd3}{activation}}(\mbox{\hyperlink{classboard}{board}}\& \mbox{\hyperlink{classboard}{board}}, gameDifficulty difficulty);}
-\DoxyCodeLine{48         button \mbox{\hyperlink{classmode_button_a4a21448a9a4a8de3f959597e0949cd73}{status}}();}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmode_button_a65003145c0b7f8926d902ef3bf7ff96f}{activation}}(\mbox{\hyperlink{classboard}{board}}\& \mbox{\hyperlink{classboard}{board}}, \mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{board::gameDifficulty}} difficulty);}
+\DoxyCodeLine{48         \mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{button}} \mbox{\hyperlink{classmode_button_a7bcead54d099ee10b29790646e35e2e5}{status}}();}
 \DoxyCodeLine{52         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmode_button_aa4ae997cbb7b839ceea5f186670fa128}{setHover}}();}
 \DoxyCodeLine{56         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmode_button_a93f36a00b6b84a592691a013881ddb2d}{setInactive}}();}
 \DoxyCodeLine{60         \textcolor{keywordtype}{void} \mbox{\hyperlink{classmode_button_a7f8abddf366ff70c97575045011b15ad}{deactivation}}();}
@@ -23,7 +25,7 @@
 \DoxyCodeLine{68         \textcolor{keywordtype}{int} xmax;}
 \DoxyCodeLine{69         \textcolor{keywordtype}{int} ymin;}
 \DoxyCodeLine{70         \textcolor{keywordtype}{int} ymax;}
-\DoxyCodeLine{71         button activity;}
+\DoxyCodeLine{71         \mbox{\hyperlink{classmode_button_a1c2c5178bb5b49eb0576b29751030972}{button}} activity;}
 \DoxyCodeLine{72         sf::Font font;}
 \DoxyCodeLine{73         sf::Text buttonText;}
 \DoxyCodeLine{74         sf::Texture activeT;}

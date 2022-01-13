@@ -3,7 +3,7 @@
 board::board():currentStatus(ongoing){
     backgroundMusic.openFromFile("audio/bck.wav");
     victoryMusic.openFromFile("audio/leagueVictory.wav");
-    defeatMusic.openFromFile("audio/leagueDefeat.wav");
+    defeatMusic.openFromFile("audio/victory3.wav");
 }
 void board::generation(gameDifficulty mode){
     musicStopper(victoryMusic);
@@ -101,13 +101,13 @@ void board::flag (int xpos, int ypos){
         flagsLeft++;
     }
 }
-gameStatus board::status(){
+board::gameStatus board::status(){
     return currentStatus;
 }
 int board::mineAmount(){
     return amountOfMines;
 }
-void board::statusChecker(){
+void board::update(){
     int unflippedTiles = 0;
     bool lost = false;
     auto checkGameStatus = [&unflippedTiles, &lost](tile &c) {
@@ -152,9 +152,6 @@ void board::setPositionsValue(int xpos, int ypos){
             setPositionsValue(xpos+1, ypos-1);
     }
     return;
-}
-int board::getPositionsValue(int xpos, int ypos){
-    return gameBoard[xpos][ypos].getShown();
 }
 void board::printing(sf::RenderWindow& screen, int xpos, int ypos, int imageLength){
     int x = xpos;

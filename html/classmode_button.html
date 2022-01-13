@@ -63,14 +63,26 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classmode_button-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">modeButton Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
+<p>This class is for the buttons used to change the mode of the game.  
+ <a href="classmode_button.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mode_button_8h_source.html">modeButton.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1c2c5178bb5b49eb0576b29751030972"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a1c2c5178bb5b49eb0576b29751030972">button</a> { <b>active</b>
+, <b>inactive</b>
+, <b>hovered</b>
+ }</td></tr>
+<tr class="separator:a1c2c5178bb5b49eb0576b29751030972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a527646c52b879cdc5b603db74a5433a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a527646c52b879cdc5b603db74a5433a4">modeButton</a> ()</td></tr>
@@ -79,10 +91,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa6a0557c5694099a414267e5a6155930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa6ede510ac9a598da14f2ef0dc7af4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#acaa6ede510ac9a598da14f2ef0dc7af4">clickable</a> (sf::Vector2i pos)</td></tr>
 <tr class="separator:acaa6ede510ac9a598da14f2ef0dc7af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874a4d29b84b49d93064da6ec771fcd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a874a4d29b84b49d93064da6ec771fcd3">activation</a> (<a class="el" href="classboard.html">board</a> &amp;<a class="el" href="classboard.html">board</a>, gameDifficulty difficulty)</td></tr>
-<tr class="separator:a874a4d29b84b49d93064da6ec771fcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a21448a9a4a8de3f959597e0949cd73"><td class="memItemLeft" align="right" valign="top">button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a4a21448a9a4a8de3f959597e0949cd73">status</a> ()</td></tr>
-<tr class="separator:a4a21448a9a4a8de3f959597e0949cd73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65003145c0b7f8926d902ef3bf7ff96f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a65003145c0b7f8926d902ef3bf7ff96f">activation</a> (<a class="el" href="classboard.html">board</a> &amp;<a class="el" href="classboard.html">board</a>, <a class="el" href="classboard.html#adfc04d9e25cb27900b18770e5c489042">board::gameDifficulty</a> difficulty)</td></tr>
+<tr class="separator:a65003145c0b7f8926d902ef3bf7ff96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcead54d099ee10b29790646e35e2e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmode_button.html#a1c2c5178bb5b49eb0576b29751030972">button</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a7bcead54d099ee10b29790646e35e2e5">status</a> ()</td></tr>
+<tr class="separator:a7bcead54d099ee10b29790646e35e2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4ae997cbb7b839ceea5f186670fa128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#aa4ae997cbb7b839ceea5f186670fa128">setHover</a> ()</td></tr>
 <tr class="separator:aa4ae997cbb7b839ceea5f186670fa128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f36a00b6b84a592691a013881ddb2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmode_button.html#a93f36a00b6b84a592691a013881ddb2d">setInactive</a> ()</td></tr>
@@ -93,8 +105,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0cf0c6a5e0353f84851210f1b813d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >This class is for the buttons used to change the mode of the game </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p >This class is for the buttons used to change the mode of the game. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a1c2c5178bb5b49eb0576b29751030972" name="a1c2c5178bb5b49eb0576b29751030972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c2c5178bb5b49eb0576b29751030972">&#9670;&nbsp;</a></span>button</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classmode_button.html#a1c2c5178bb5b49eb0576b29751030972">modeButton::button</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Enums for the status of a button </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a527646c52b879cdc5b603db74a5433a4" name="a527646c52b879cdc5b603db74a5433a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a527646c52b879cdc5b603db74a5433a4">&#9670;&nbsp;</a></span>modeButton()</h2>
 
@@ -122,8 +150,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a874a4d29b84b49d93064da6ec771fcd3" name="a874a4d29b84b49d93064da6ec771fcd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874a4d29b84b49d93064da6ec771fcd3">&#9670;&nbsp;</a></span>activation()</h2>
+<a id="a65003145c0b7f8926d902ef3bf7ff96f" name="a65003145c0b7f8926d902ef3bf7ff96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65003145c0b7f8926d902ef3bf7ff96f">&#9670;&nbsp;</a></span>activation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -137,7 +165,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">gameDifficulty&#160;</td>
+          <td class="paramtype"><a class="el" href="classboard.html#adfc04d9e25cb27900b18770e5c489042">board::gameDifficulty</a>&#160;</td>
           <td class="paramname"><em>difficulty</em>&#160;</td>
         </tr>
         <tr>
@@ -249,7 +277,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Applys the customization and positioning of the button </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Applies the customization and positioning of the button </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xpos</td><td>x-position of the button </td></tr>
     <tr><td class="paramname">ypos</td><td>y-position of the button </td></tr>
@@ -344,21 +372,21 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4a21448a9a4a8de3f959597e0949cd73" name="a4a21448a9a4a8de3f959597e0949cd73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a21448a9a4a8de3f959597e0949cd73">&#9670;&nbsp;</a></span>status()</h2>
+<a id="a7bcead54d099ee10b29790646e35e2e5" name="a7bcead54d099ee10b29790646e35e2e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bcead54d099ee10b29790646e35e2e5">&#9670;&nbsp;</a></span>status()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">button modeButton::status </td>
+          <td class="memname"><a class="el" href="classmode_button.html#a1c2c5178bb5b49eb0576b29751030972">modeButton::button</a> modeButton::status </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Gets the status of the button </p><dl class="section return"><dt>Returns</dt><dd>activity </dd></dl>
+<p >Gets the status of the button (active, inactive and hovered) </p><dl class="section return"><dt>Returns</dt><dd>Button's status </dd></dl>
 
 </div>
 </div>

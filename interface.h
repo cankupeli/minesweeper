@@ -4,13 +4,12 @@
 #include "modeButton.h"
 #include "board.h"
 #include "text.h"
-/**
- * This class acts as a wrapper class for the program
- */
+
+//! This class acts as a wrapper class for the program
 class interface{
     public:
         /**
-         * Creates the screen and all its components 
+         * Parameterized constructor
          * @param screenWidth The width of the screen in pixels
          * @param screenHeight The height of the screen in pixels
          * @param boardXpos The x-position of the top left corner of the board, in pixels
@@ -19,6 +18,8 @@ class interface{
          */
         interface(int screenWidth, int screenHeight, int boardXpos, int boardYpos, int tileLength);
     private:
+        void hover(modeButton& currentButton, sf::Vector2i pos);
+        bool withinBoard (sf::Vector2i pos, int boardXpos, int boardYpos, int tileLength, int amountOfTiles);
         void update();
         void print();
         sf::RenderWindow app;
@@ -30,6 +31,4 @@ class interface{
         text title, timerT, flagsT, victory, detonated;
         modeButton easyMode, mediumMode, hardMode, quitMode;
 };
-void hover(modeButton& currentButton, sf::Vector2i pos);
-bool withinBoard (sf::Vector2i pos, int boardXpos, int boardYpos, int tileLength, int amountOfTiles);
 #endif

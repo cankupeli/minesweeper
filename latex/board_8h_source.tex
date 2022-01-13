@@ -10,40 +10,40 @@
 \DoxyCodeLine{7 \textcolor{preprocessor}{\#include <sstream>}}
 \DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}tile.h"{}}}
 \DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}tileImageDetermine.h"{}}}
-\DoxyCodeLine{13 \textcolor{keyword}{enum} gameDifficulty\{}
-\DoxyCodeLine{14     easy, medium, hard}
-\DoxyCodeLine{15 \};}
-\DoxyCodeLine{19 \textcolor{keyword}{enum} gameStatus\{}
-\DoxyCodeLine{20     ongoing, lost, won}
-\DoxyCodeLine{21 \};}
-\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{classboard}{board}}\{}
-\DoxyCodeLine{26     \textcolor{keyword}{public}:}
-\DoxyCodeLine{30         \mbox{\hyperlink{classboard_a2a97f34e7c9ed8ace6a2508bb2c6e2a2}{board}}();}
-\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a78c380bcd5dd7713da04768d40d3798d}{generation}}(gameDifficulty mode);}
-\DoxyCodeLine{40         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a071d76b15cd7bc2a927c35b6e7bc5f76}{generationValue}}();}
-\DoxyCodeLine{44         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a5762ccb7f4c0082b5afbe43cd13cd44a}{print}}();}
-\DoxyCodeLine{50         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a868911a206c15ee5633ffb4fae3f0532}{flag}} (\textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos);}
-\DoxyCodeLine{55         gameStatus \mbox{\hyperlink{classboard_a4e1fa37f9415a3c242de48ab5898571d}{status}}();}
-\DoxyCodeLine{59         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a43e6380695933868bc2d96ff5ed84b7a}{statusChecker}}();}
-\DoxyCodeLine{65         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a33b27877c28796846a79a528678fc087}{setPositionsValue}}(\textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos);}
-\DoxyCodeLine{72         \textcolor{keywordtype}{int} \mbox{\hyperlink{classboard_a93802e1b17033d8c467610999b63d0f5}{getPositionsValue}}(\textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos);}
-\DoxyCodeLine{80         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_afb37814d12ddfa1baa6bb8de42eb7501}{printing}}(sf::RenderWindow\& screen, \textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos, \textcolor{keywordtype}{int} imageLength);}
-\DoxyCodeLine{85         \textcolor{keywordtype}{int} \mbox{\hyperlink{classboard_ac4d339d4800835ab5e6760a86dd88d25}{size}}();}
-\DoxyCodeLine{90         \textcolor{keywordtype}{int} \mbox{\hyperlink{classboard_a5fcf328582ecf990efe4d77e4487dd5b}{mineAmount}}();}
-\DoxyCodeLine{95         std::string \mbox{\hyperlink{classboard_a868911a206c15ee5633ffb4fae3f0532}{flag}}();}
-\DoxyCodeLine{100         std::string \mbox{\hyperlink{classboard_ab99cb51e374f95423bef5ad666886c73}{time}}();}
-\DoxyCodeLine{101     \textcolor{keyword}{private}:}
-\DoxyCodeLine{102         \textcolor{keywordtype}{void} musicPlayer(sf::Music\& music);}
-\DoxyCodeLine{103         \textcolor{keywordtype}{void} musicStopper(sf::Music\& music);}
-\DoxyCodeLine{104         \textcolor{keywordtype}{int} xyCells;}
-\DoxyCodeLine{105         \textcolor{keywordtype}{int} amountOfMines;}
-\DoxyCodeLine{106         \textcolor{keywordtype}{int} flagsLeft;}
-\DoxyCodeLine{107         std::string gameTime;}
-\DoxyCodeLine{108         gameStatus currentStatus;}
-\DoxyCodeLine{109         sf::Clock timer;}
-\DoxyCodeLine{110         sf::Music backgroundMusic, victoryMusic, defeatMusic;}
-\DoxyCodeLine{111         std::vector<std::vector<tile> > gameBoard;}
-\DoxyCodeLine{112 \};}
-\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classboard}{board}}\{}
+\DoxyCodeLine{13     \textcolor{keyword}{public}:}
+\DoxyCodeLine{17         \textcolor{keyword}{enum} \mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{gameDifficulty}}\{}
+\DoxyCodeLine{18             easy, medium, hard}
+\DoxyCodeLine{19         \};}
+\DoxyCodeLine{23         \textcolor{keyword}{enum} \mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{gameStatus}}\{}
+\DoxyCodeLine{24             ongoing, lost, won}
+\DoxyCodeLine{25         \};}
+\DoxyCodeLine{29         \mbox{\hyperlink{classboard_a2a97f34e7c9ed8ace6a2508bb2c6e2a2}{board}}();}
+\DoxyCodeLine{34         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a78c380bcd5dd7713da04768d40d3798d}{generation}}(\mbox{\hyperlink{classboard_adfc04d9e25cb27900b18770e5c489042}{gameDifficulty}} mode);}
+\DoxyCodeLine{39         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a071d76b15cd7bc2a927c35b6e7bc5f76}{generationValue}}();}
+\DoxyCodeLine{45         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a868911a206c15ee5633ffb4fae3f0532}{flag}}(\textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos);}
+\DoxyCodeLine{50         \mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{gameStatus}} \mbox{\hyperlink{classboard_a8a4074d7e3fad4fdd6e27f31b1d95b73}{status}}();}
+\DoxyCodeLine{54         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_af2370b01c49c50d5c01de7e6db6c4aad}{update}}();}
+\DoxyCodeLine{60         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_a33b27877c28796846a79a528678fc087}{setPositionsValue}}(\textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos);}
+\DoxyCodeLine{68         \textcolor{keywordtype}{void} \mbox{\hyperlink{classboard_afb37814d12ddfa1baa6bb8de42eb7501}{printing}}(sf::RenderWindow\& screen, \textcolor{keywordtype}{int} xpos, \textcolor{keywordtype}{int} ypos, \textcolor{keywordtype}{int} imageLength);}
+\DoxyCodeLine{74         \textcolor{keywordtype}{int} \mbox{\hyperlink{classboard_ac4d339d4800835ab5e6760a86dd88d25}{size}}();}
+\DoxyCodeLine{79         std::string \mbox{\hyperlink{classboard_a868911a206c15ee5633ffb4fae3f0532}{flag}}();}
+\DoxyCodeLine{85         std::string \mbox{\hyperlink{classboard_ab99cb51e374f95423bef5ad666886c73}{time}}();}
+\DoxyCodeLine{86     \textcolor{keyword}{private}:}
+\DoxyCodeLine{87         \textcolor{keywordtype}{int} mineAmount();}
+\DoxyCodeLine{88         \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{89         \textcolor{keywordtype}{void} musicPlayer(sf::Music\& music);}
+\DoxyCodeLine{90         \textcolor{keywordtype}{void} musicStopper(sf::Music\& music);}
+\DoxyCodeLine{91         \textcolor{keywordtype}{int} xyCells;}
+\DoxyCodeLine{92         \textcolor{keywordtype}{int} amountOfMines;}
+\DoxyCodeLine{93         \textcolor{keywordtype}{int} flagsLeft;}
+\DoxyCodeLine{94         std::string gameTime;}
+\DoxyCodeLine{95         \mbox{\hyperlink{classboard_a40c0ec610c62fa56ebf28be308f32c48}{gameStatus}} currentStatus;}
+\DoxyCodeLine{96         sf::Clock timer;}
+\DoxyCodeLine{97         sf::Music backgroundMusic, victoryMusic, defeatMusic;}
+\DoxyCodeLine{98         std::vector<std::vector<tile> > gameBoard;}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
