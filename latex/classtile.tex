@@ -1,0 +1,144 @@
+\hypertarget{classtile}{}\doxysection{tile Class Reference}
+\label{classtile}\index{tile@{tile}}
+
+
+{\ttfamily \#include $<$tile.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtile_a294955b8c59ebef580775218e9df6f56}{tile}} ()
+\item 
+\mbox{\hyperlink{classtile_a83ea23b887badb97a87d85cadd9fb0e7}{tile}} (int value\+Hidden, int value\+Shown)
+\item 
+int \mbox{\hyperlink{classtile_a5a9a6f969b0bf4acbb8d97d08071ddd6}{get\+Hidden}} ()
+\item 
+int \mbox{\hyperlink{classtile_a8b4835efc3d729774320c6ceee59f21f}{get\+Shown}} ()
+\item 
+int \mbox{\hyperlink{classtile_a5c180c76a91783c6a06668e6b79baaf7}{get\+Checked}} ()
+\item 
+bool \mbox{\hyperlink{classtile_ad64a1ddec74c4d53145c7d6342e9dde5}{is\+Flag}} ()
+\item 
+bool \mbox{\hyperlink{classtile_a0abe6bd7aba9f472c4380440990068fc}{is\+Bomb}} ()
+\item 
+void \mbox{\hyperlink{classtile_a2b83aa29fb2bf50c1a43e975904ecc1e}{set\+Hidden}} (int value)
+\item 
+void \mbox{\hyperlink{classtile_ad747430f150100f63871498f6f5e18db}{set\+Shown}} (int value)
+\item 
+void \mbox{\hyperlink{classtile_a8055549f693aafd7bdc80fa71ec3638f}{set\+Shown}} ()
+\item 
+void \mbox{\hyperlink{classtile_a262aea105acac7475b50afdef31c5c26}{increment}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representation of a double sided tile. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtile_a294955b8c59ebef580775218e9df6f56}\label{classtile_a294955b8c59ebef580775218e9df6f56}} 
+\index{tile@{tile}!tile@{tile}}
+\index{tile@{tile}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{tile()}{tile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily tile\+::tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor \mbox{\Hypertarget{classtile_a83ea23b887badb97a87d85cadd9fb0e7}\label{classtile_a83ea23b887badb97a87d85cadd9fb0e7}} 
+\index{tile@{tile}!tile@{tile}}
+\index{tile@{tile}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{tile()}{tile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily tile\+::tile (\begin{DoxyParamCaption}\item[{int}]{value\+Hidden,  }\item[{int}]{value\+Shown }\end{DoxyParamCaption})}
+
+Parameterised constructor 
+\begin{DoxyParams}{Parameters}
+{\em value\+Hidden} & Tile\textquotesingle{}s hidden (true) valuation and type. \\
+\hline
+{\em value\+Shown} & Tile\textquotesingle{}s visible valuation and type. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtile_a5c180c76a91783c6a06668e6b79baaf7}\label{classtile_a5c180c76a91783c6a06668e6b79baaf7}} 
+\index{tile@{tile}!getChecked@{getChecked}}
+\index{getChecked@{getChecked}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{getChecked()}{getChecked()}}
+{\footnotesize\ttfamily int tile\+::get\+Checked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the status of the tile; if it has been checked or not. \begin{DoxyReturn}{Returns}
+member\+: checked 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtile_a5a9a6f969b0bf4acbb8d97d08071ddd6}\label{classtile_a5a9a6f969b0bf4acbb8d97d08071ddd6}} 
+\index{tile@{tile}!getHidden@{getHidden}}
+\index{getHidden@{getHidden}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{getHidden()}{getHidden()}}
+{\footnotesize\ttfamily int tile\+::get\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the hidden (true) value of the tile. \begin{DoxyReturn}{Returns}
+member\+: value\+Hidden 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtile_a8b4835efc3d729774320c6ceee59f21f}\label{classtile_a8b4835efc3d729774320c6ceee59f21f}} 
+\index{tile@{tile}!getShown@{getShown}}
+\index{getShown@{getShown}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{getShown()}{getShown()}}
+{\footnotesize\ttfamily int tile\+::get\+Shown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the visible value of the tile. \begin{DoxyReturn}{Returns}
+member\+: value\+Shown 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtile_a262aea105acac7475b50afdef31c5c26}\label{classtile_a262aea105acac7475b50afdef31c5c26}} 
+\index{tile@{tile}!increment@{increment}}
+\index{increment@{increment}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{increment()}{increment()}}
+{\footnotesize\ttfamily void tile\+::increment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Increments the valuation of the tile\textquotesingle{}s hidden value by 1; \mbox{\Hypertarget{classtile_a0abe6bd7aba9f472c4380440990068fc}\label{classtile_a0abe6bd7aba9f472c4380440990068fc}} 
+\index{tile@{tile}!isBomb@{isBomb}}
+\index{isBomb@{isBomb}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{isBomb()}{isBomb()}}
+{\footnotesize\ttfamily bool tile\+::is\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the tile\textquotesingle{}s shown value is equivalent to that of a bomb. \begin{DoxyReturn}{Returns}
+true if value\+Shown is equivalent to 9 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtile_ad64a1ddec74c4d53145c7d6342e9dde5}\label{classtile_ad64a1ddec74c4d53145c7d6342e9dde5}} 
+\index{tile@{tile}!isFlag@{isFlag}}
+\index{isFlag@{isFlag}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{isFlag()}{isFlag()}}
+{\footnotesize\ttfamily bool tile\+::is\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks if the tile\textquotesingle{}s shown value is equivalent to that of a flag. \begin{DoxyReturn}{Returns}
+true if value\+Shown is equivalent to 11 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classtile_a2b83aa29fb2bf50c1a43e975904ecc1e}\label{classtile_a2b83aa29fb2bf50c1a43e975904ecc1e}} 
+\index{tile@{tile}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily void tile\+::set\+Hidden (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+Sets the value of tile\textquotesingle{}s hidden valuation. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtile_a8055549f693aafd7bdc80fa71ec3638f}\label{classtile_a8055549f693aafd7bdc80fa71ec3638f}} 
+\index{tile@{tile}!setShown@{setShown}}
+\index{setShown@{setShown}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{setShown()}{setShown()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void tile\+::set\+Shown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets the value of tile\textquotesingle{}s shown valuation to equal that of the tile\textquotesingle{}s hidden valuation and set the tile\textquotesingle{}s status to being checked. \mbox{\Hypertarget{classtile_ad747430f150100f63871498f6f5e18db}\label{classtile_ad747430f150100f63871498f6f5e18db}} 
+\index{tile@{tile}!setShown@{setShown}}
+\index{setShown@{setShown}!tile@{tile}}
+\doxysubsubsection{\texorpdfstring{setShown()}{setShown()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void tile\+::set\+Shown (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+Sets the value of tile\textquotesingle{}s shown valuation. 
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to be set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+tile.\+h\item 
+tile.\+cpp\end{DoxyCompactItemize}

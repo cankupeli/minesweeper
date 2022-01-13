@@ -77,6 +77,7 @@
         "*.tcc": "cpp",
         "memory_resource": "cpp",
         "iostream": "cpp",
-        "stop_token": "cpp"
+        "stop_token": "cpp",
+        "__memory": "cpp"
     }
 }

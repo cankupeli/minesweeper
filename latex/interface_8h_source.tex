@@ -4,29 +4,26 @@
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef INTERFACE\_H}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#define INTERFACE\_H}}
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#include <time.h>}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}modeButton.h"{}}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}board.h"{}}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}text.h"{}}}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classinterface}{interface}}\{}
-\DoxyCodeLine{10     \textcolor{keyword}{public}:}
-\DoxyCodeLine{11         \mbox{\hyperlink{classinterface}{interface}}(\textcolor{keywordtype}{int} screenWidth, \textcolor{keywordtype}{int} screenHeight, \textcolor{keywordtype}{int} boardXpos, \textcolor{keywordtype}{int} boardYpos, \textcolor{keywordtype}{int} tileLength);}
-\DoxyCodeLine{12         \textcolor{keywordtype}{void} update();}
-\DoxyCodeLine{13         \textcolor{keywordtype}{void} print();}
-\DoxyCodeLine{14     \textcolor{keyword}{private}:}
-\DoxyCodeLine{15         sf::RenderWindow app;}
-\DoxyCodeLine{16         \mbox{\hyperlink{classboard}{board}} minesweeperBoard;}
-\DoxyCodeLine{17         \textcolor{keywordtype}{int} screenWidth, screenHeight, boardXpos, boardYpos, tileLength;}
-\DoxyCodeLine{18         sf::Font font;}
-\DoxyCodeLine{19         sf::Texture backgroundT, navT;}
-\DoxyCodeLine{20         sf::Sprite backgroundS, navS;}
-\DoxyCodeLine{21         \textcolor{comment}{//sf::Text title, timerT, flagsT, victory, detonated;}}
-\DoxyCodeLine{22         \mbox{\hyperlink{classtext}{text}} title, timerT, flagsT, victory, detonated;}
-\DoxyCodeLine{23         \mbox{\hyperlink{classmode_button}{modeButton}} easyMode, mediumMode, hardMode, quitMode;}
-\DoxyCodeLine{24 \};}
-\DoxyCodeLine{25 \textcolor{keywordtype}{void} hover(\mbox{\hyperlink{classmode_button}{modeButton}}\& currentButton, sf::Vector2i pos);}
-\DoxyCodeLine{26 \textcolor{keywordtype}{bool} withinBoard (sf::Vector2i pos, \textcolor{keywordtype}{int} boardXpos, \textcolor{keywordtype}{int} boardYpos, \textcolor{keywordtype}{int} tileLength, \textcolor{keywordtype}{int} amountOfTiles);}
-\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}modeButton.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}board.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}text.h"{}}}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classinterface}{interface}}\{}
+\DoxyCodeLine{11     \textcolor{keyword}{public}:}
+\DoxyCodeLine{20         \mbox{\hyperlink{classinterface_a0b1423dccfa950637aa7c3451df4283d}{interface}}(\textcolor{keywordtype}{int} screenWidth, \textcolor{keywordtype}{int} screenHeight, \textcolor{keywordtype}{int} boardXpos, \textcolor{keywordtype}{int} boardYpos, \textcolor{keywordtype}{int} tileLength);}
+\DoxyCodeLine{21     \textcolor{keyword}{private}:}
+\DoxyCodeLine{22         \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{23         \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{24         sf::RenderWindow app;}
+\DoxyCodeLine{25         \mbox{\hyperlink{classboard}{board}} minesweeperBoard;}
+\DoxyCodeLine{26         \textcolor{keywordtype}{int} screenWidth, screenHeight, boardXpos, boardYpos, tileLength;}
+\DoxyCodeLine{27         sf::Font font;}
+\DoxyCodeLine{28         sf::Texture backgroundT, navT;}
+\DoxyCodeLine{29         sf::Sprite backgroundS, navS;}
+\DoxyCodeLine{30         \mbox{\hyperlink{classtext}{text}} title, timerT, flagsT, victory, detonated;}
+\DoxyCodeLine{31         \mbox{\hyperlink{classmode_button}{modeButton}} easyMode, mediumMode, hardMode, quitMode;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} hover(\mbox{\hyperlink{classmode_button}{modeButton}}\& currentButton, sf::Vector2i pos);}
+\DoxyCodeLine{34 \textcolor{keywordtype}{bool} withinBoard (sf::Vector2i pos, \textcolor{keywordtype}{int} boardXpos, \textcolor{keywordtype}{int} boardYpos, \textcolor{keywordtype}{int} tileLength, \textcolor{keywordtype}{int} amountOfTiles);}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

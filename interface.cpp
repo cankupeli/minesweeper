@@ -30,59 +30,59 @@ interface::interface(int screenWidth, int screenHeight, int boardXpos, int board
     hardMode.creation(50, 700, 0, 900, 650, 850, 60, "HARD MODE", "images/active.png");
     quitMode.creation(400, 1250, 0, 900, 1200, 1400, 60, "QUIT", "images/active.png");
     easyMode.activation(minesweeperBoard, gameDifficulty::easy);
+    while (app.isOpen()){
+        update();
+        print();
+    }    
 }
 void interface::update(){
-    while (app.isOpen()) 
+    int amountOfTiles = minesweeperBoard.size();
+    sf::Vector2i pos = sf::Mouse::getPosition(app);
+    int x = (pos.x-boardXpos) / tileLength;
+    int y = (pos.y-boardYpos) / tileLength;
+    sf::Event e;
+    while (app.pollEvent(e))
     {
-        int amountOfTiles = minesweeperBoard.size();
-        sf::Vector2i pos = sf::Mouse::getPosition(app);
-        int x = (pos.x-boardXpos) / tileLength;
-        int y = (pos.y-boardYpos) / tileLength;
-        sf::Event e;
-        while (app.pollEvent(e))
-        {
-            if (e.type == sf::Event::Closed)
-                app.close();
-            if (e.type == sf::Event::MouseButtonReleased){
-                if (withinBoard(pos, boardXpos, boardYpos, tileLength, amountOfTiles)){
-                    if (e.mouseButton.button == sf::Mouse::Left && minesweeperBoard.status() != gameStatus::won){ //if left click, that cell shows hidden cell
-                        minesweeperBoard.setPositionsValue(x,y);
-                    }
-                    if (e.mouseButton.button == sf::Mouse::Right && minesweeperBoard.status() != gameStatus::won){ //if right click, that cell becomes flag 
-                        minesweeperBoard.flag(x,y);
-                    }
-                    minesweeperBoard.statusChecker();
+        if (e.type == sf::Event::Closed)
+            app.close();
+        if (e.type == sf::Event::MouseButtonReleased){
+            if (withinBoard(pos, boardXpos, boardYpos, tileLength, amountOfTiles)){
+                if (e.mouseButton.button == sf::Mouse::Left && minesweeperBoard.status() != gameStatus::won){ //if left click, that cell shows hidden cell
+                    minesweeperBoard.setPositionsValue(x,y);
                 }
-                if(e.mouseButton.button == sf::Mouse::Left){
-                    if (easyMode.clickable(pos)){
-                        easyMode.activation(minesweeperBoard, gameDifficulty::easy);
-                        mediumMode.deactivation();
-                        hardMode.deactivation();
-                    }
-                    if (mediumMode.clickable(pos)){
-                        mediumMode.activation(minesweeperBoard, gameDifficulty::medium);
-                        easyMode.deactivation();
-                        hardMode.deactivation();
-                    }
-                    if (hardMode.clickable(pos)){
-                        hardMode.activation(minesweeperBoard, gameDifficulty::hard);
-                        mediumMode.deactivation();
-                        easyMode.deactivation();
-                    }
-                    if (quitMode.clickable(pos)){
-                        app.close();
-                    }
+                if (e.mouseButton.button == sf::Mouse::Right && minesweeperBoard.status() != gameStatus::won){ //if right click, that cell becomes flag 
+                    minesweeperBoard.flag(x,y);
+                }
+                minesweeperBoard.statusChecker();
+            }
+            if(e.mouseButton.button == sf::Mouse::Left){
+                if (easyMode.clickable(pos)){
+                    easyMode.activation(minesweeperBoard, gameDifficulty::easy);
+                    mediumMode.deactivation();
+                    hardMode.deactivation();
+                }
+                if (mediumMode.clickable(pos)){
+                    mediumMode.activation(minesweeperBoard, gameDifficulty::medium);
+                    easyMode.deactivation();
+                    hardMode.deactivation();
+                }
+                if (hardMode.clickable(pos)){
+                    hardMode.activation(minesweeperBoard, gameDifficulty::hard);
+                    mediumMode.deactivation();
+                    easyMode.deactivation();
+                }
+                if (quitMode.clickable(pos)){
+                    app.close();
                 }
             }
         }
-        hover(easyMode, pos);
-        hover(mediumMode, pos);
-        hover(hardMode, pos);
-        hover(quitMode, pos);
-        flagsT.stringSetter(minesweeperBoard.flag());
-        timerT.stringSetter("TIMER: " + minesweeperBoard.time() + "s");
-        print();
     }
+    hover(easyMode, pos);
+    hover(mediumMode, pos);
+    hover(hardMode, pos);
+    hover(quitMode, pos);
+    flagsT.stringSetter(minesweeperBoard.flag());
+    timerT.stringSetter("TIMER: " + minesweeperBoard.time() + "s");
 }
 void interface::print(){
     app.clear();

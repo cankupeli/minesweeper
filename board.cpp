@@ -2,9 +2,13 @@
 #include <algorithm>
 board::board():currentStatus(ongoing){
     backgroundMusic.openFromFile("audio/bck.wav");
+    victoryMusic.openFromFile("audio/leagueVictory.wav");
+    defeatMusic.openFromFile("audio/leagueDefeat.wav");
 }
 void board::generation(gameDifficulty mode){
-    backgroundMusic.play();
+    musicStopper(victoryMusic);
+    musicStopper(defeatMusic);
+    musicPlayer(backgroundMusic);
     if (mode == easy){
         xyCells = 9;
         amountOfMines = 10;
@@ -22,20 +26,20 @@ void board::generation(gameDifficulty mode){
     timer.restart();
     currentStatus = ongoing;
     gameBoard.resize(xyCells);
-    auto columnGenerator = [this]() {
-        cell temp(0, 10);
+    auto tileGenerator = [this]() {
+        tile temp(0, 10);
         return temp;
     };
-    auto rowGenerator = [this, columnGenerator]() {
-        std::vector<cell> column(xyCells);
-        std::generate(column.begin(), column.end(), columnGenerator);
+    auto rowGenerator = [this, tileGenerator]() {
+        std::vector<tile> column(xyCells);
+        std::generate(column.begin(), column.end(), tileGenerator);
         return column;
     };
     std::generate(gameBoard.begin(), gameBoard.end(), rowGenerator);
     /*for (int i = 0; i < xyCells; i++){
-        std::vector<cell> column;
+        std::vector<tile> column;
         for (int i = 0; i < xyCells; i++){
-            cell temp(0, 10);
+            tile temp(0, 10);
             column.push_back(temp);
         }
         gameBoard.push_back(column);
@@ -106,7 +110,7 @@ int board::mineAmount(){
 void board::statusChecker(){
     int unflippedTiles = 0;
     bool lost = false;
-    auto checkGameStatus = [&unflippedTiles, &lost](cell &c) {
+    auto checkGameStatus = [&unflippedTiles, &lost](tile &c) {
         if (c.getShown() == 10 || c.getShown() == 11)
             unflippedTiles++;
         if (c.getShown() == 9)
@@ -115,11 +119,13 @@ void board::statusChecker(){
     for (auto e: gameBoard)
         std::for_each(e.begin(), e.end(), checkGameStatus);
     if (unflippedTiles == mineAmount()){
-        musicStopper();
+        musicStopper(backgroundMusic);
+        musicPlayer(victoryMusic);
         currentStatus = gameStatus::won;
     }
     else if (lost){
-        musicStopper();
+        musicStopper(backgroundMusic);
+        musicPlayer(defeatMusic);
         currentStatus = gameStatus::lost;
     }
 }
@@ -177,25 +183,23 @@ void board::printing(sf::RenderWindow& screen, int xpos, int ypos, int imageLeng
 int board::size(){
     return xyCells;
 }
-
 std::string board::flag(){
-    std::stringstream ss;                                   //FLAGS
+    std::stringstream ss;
     ss << flagsLeft;
     return "FLAGS:" + ss.str();
 }
-//if the game is not won or lost, update the clock. print the last updated clock
 std::string board::time(){
     if (status() == ongoing){
-    int timeLeftSeconds = timer.getElapsedTime().asSeconds();
-    std::stringstream ssTimer;
-    ssTimer << timeLeftSeconds;
-    gameTime = ssTimer.str();
+        int timeLeftSeconds = timer.getElapsedTime().asSeconds();
+        std::stringstream ssTimer;
+        ssTimer << timeLeftSeconds;
+        gameTime = ssTimer.str();
     }
     return gameTime;
 }
-void board::musicStopper(){
-    backgroundMusic.stop();
+void board::musicStopper(sf::Music& music){
+    music.stop();
 }
-void board::musicPlayer(){
-    backgroundMusic.play();
+void board::musicPlayer(sf::Music& music){
+    music.play();
 }

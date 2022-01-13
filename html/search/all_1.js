@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cell_0',['cell',['../classcell.html',1,'cell'],['../classcell.html#a95ad05982b253ca62d45bb7934a39c8c',1,'cell::cell()']]]
+  ['board_0',['board',['../classboard.html',1,'board'],['../classboard.html#a2a97f34e7c9ed8ace6a2508bb2c6e2a2',1,'board::board()']]]
 ];

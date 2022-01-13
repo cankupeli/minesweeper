@@ -1,17 +1,81 @@
 \hypertarget{classtext}{}\doxysection{text Class Reference}
 \label{classtext}\index{text@{text}}
+
+
+{\ttfamily \#include $<$text.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classtext_a232e0be40cdb0b82750134327fb400ac}\label{classtext_a232e0be40cdb0b82750134327fb400ac}} 
-void {\bfseries creation} (sf\+::\+Font font, sf\+::\+Color color, int size, int xpos, int ypos, std\+::string text\+String=\char`\"{}\char`\"{})
+\mbox{\hyperlink{classtext_a14339f5c8f5e1fb023f0e68bf5685247}{text}} ()
 \item 
-\mbox{\Hypertarget{classtext_ad560d7230bac8068f00494500ce245df}\label{classtext_ad560d7230bac8068f00494500ce245df}} 
-void {\bfseries string\+Setter} (std\+::string string\+Set)
+void \mbox{\hyperlink{classtext_a232e0be40cdb0b82750134327fb400ac}{creation}} (sf\+::\+Font font, sf\+::\+Color color, int size, int xpos, int ypos, std\+::string text\+String=\char`\"{}\char`\"{})
 \item 
-\mbox{\Hypertarget{classtext_a5f6e9829eb472217329ba5a59153e3ca}\label{classtext_a5f6e9829eb472217329ba5a59153e3ca}} 
-void {\bfseries printing} (sf\+::\+Render\+Window \&screen)
+void \mbox{\hyperlink{classtext_ad560d7230bac8068f00494500ce245df}{string\+Setter}} (std\+::string string\+Set)
+\item 
+void \mbox{\hyperlink{classtext_a5f6e9829eb472217329ba5a59153e3ca}{printing}} (sf\+::\+Render\+Window \&screen)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class handles the creation and displaying of all text on the window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtext_a14339f5c8f5e1fb023f0e68bf5685247}\label{classtext_a14339f5c8f5e1fb023f0e68bf5685247}} 
+\index{text@{text}!text@{text}}
+\index{text@{text}!text@{text}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily text\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtext_a232e0be40cdb0b82750134327fb400ac}\label{classtext_a232e0be40cdb0b82750134327fb400ac}} 
+\index{text@{text}!creation@{creation}}
+\index{creation@{creation}!text@{text}}
+\doxysubsubsection{\texorpdfstring{creation()}{creation()}}
+{\footnotesize\ttfamily void text\+::creation (\begin{DoxyParamCaption}\item[{sf\+::\+Font}]{font,  }\item[{sf\+::\+Color}]{color,  }\item[{int}]{size,  }\item[{int}]{xpos,  }\item[{int}]{ypos,  }\item[{std\+::string}]{text\+String = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Applys customazation to the text and sets the texts on screen position. 
+\begin{DoxyParams}{Parameters}
+{\em font} & the font to be applied on the text \\
+\hline
+{\em color} & the color to be applied on the text \\
+\hline
+{\em size} & the size to be applied on the text \\
+\hline
+{\em xpos} & the x-\/position of the texts screen placement \\
+\hline
+{\em ypos} & the y-\/position of the texts screen placement \\
+\hline
+{\em text\+String} & the string to be set on the text \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+If no string is given the string will be empty by default 
+\end{DoxyAttention}
+\mbox{\Hypertarget{classtext_a5f6e9829eb472217329ba5a59153e3ca}\label{classtext_a5f6e9829eb472217329ba5a59153e3ca}} 
+\index{text@{text}!printing@{printing}}
+\index{printing@{printing}!text@{text}}
+\doxysubsubsection{\texorpdfstring{printing()}{printing()}}
+{\footnotesize\ttfamily void text\+::printing (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{screen }\end{DoxyParamCaption})}
+
+prints the text to a screen 
+\begin{DoxyParams}{Parameters}
+{\em screen} & the screen text will be printed to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classtext_ad560d7230bac8068f00494500ce245df}\label{classtext_ad560d7230bac8068f00494500ce245df}} 
+\index{text@{text}!stringSetter@{stringSetter}}
+\index{stringSetter@{stringSetter}!text@{text}}
+\doxysubsubsection{\texorpdfstring{stringSetter()}{stringSetter()}}
+{\footnotesize\ttfamily void text\+::string\+Setter (\begin{DoxyParamCaption}\item[{std\+::string}]{string\+Set }\end{DoxyParamCaption})}
+
+Sets the texts string 
+\begin{DoxyParams}{Parameters}
+{\em string\+Set} & the string to be set on text \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
