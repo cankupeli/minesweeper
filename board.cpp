@@ -2,8 +2,8 @@
 #include <algorithm>
 board::board():currentStatus(ongoing){
     backgroundMusic.openFromFile("audio/bck.wav");
-    victoryMusic.openFromFile("audio/leagueVictory.wav");
-    defeatMusic.openFromFile("audio/victory3.wav");
+    victoryMusic.openFromFile("audio/minesweeperVictory.wav");
+    defeatMusic.openFromFile("audio/minesweeperDefeat.wav");
 }
 void board::generation(gameDifficulty mode){
     musicStopper(victoryMusic);
@@ -110,14 +110,14 @@ int board::mineAmount(){
 void board::update(){
     int unflippedTiles = 0;
     bool lost = false;
-    auto checkGameStatus = [&unflippedTiles, &lost](tile &c) {
-        if (c.getShown() == 10 || c.getShown() == 11)
+    auto checkGameStatus = [&unflippedTiles, &lost](tile &tile) {
+        if (tile.getShown() == 10 || tile.getShown() == 11)
             unflippedTiles++;
-        if (c.getShown() == 9)
+        if (tile.getShown() == 9)
             lost = true;
     };
-    for (auto e: gameBoard)
-        std::for_each(e.begin(), e.end(), checkGameStatus);
+    for (auto row: gameBoard)
+        std::for_each(row.begin(), row.end(), checkGameStatus);
     if (unflippedTiles == mineAmount()){
         musicStopper(backgroundMusic);
         musicPlayer(victoryMusic);
@@ -151,7 +151,6 @@ void board::setPositionsValue(int xpos, int ypos){
         if (ypos > 0 && xpos+1 < xyCells && !gameBoard[xpos+1][ypos-1].getChecked())
             setPositionsValue(xpos+1, ypos-1);
     }
-    return;
 }
 void board::printing(sf::RenderWindow& screen, int xpos, int ypos, int imageLength){
     int x = xpos;

@@ -86,19 +86,19 @@ void interface::update(){
 }
 void interface::print(){
     app.clear();
-    app.draw(backgroundS);                                  //WALLPAPER BACKGROUND
-    app.draw(navS);                                         //NAVIGATION BACKGROUND
-    title.printing(app);
-    easyMode.printing(app);                                 //EASY MODE
-    mediumMode.printing(app);                               //MEDIUM MODE  
-    hardMode.printing(app);                                 //HARD MODE
-    quitMode.printing(app);                                 //QUIT
-    minesweeperBoard.printing(app, boardXpos, boardYpos, tileLength);  //BOARD
-    flagsT.printing(app);
-    timerT.printing(app);
-    if (minesweeperBoard.status()==board::won)                       //VICTORY
+    app.draw(backgroundS);                                              //WALLPAPER BACKGROUND
+    app.draw(navS);                                                     //NAVIGATION BACKGROUND
+    title.printing(app);                                                //TITLE
+    easyMode.printing(app);                                             //EASY MODE
+    mediumMode.printing(app);                                           //MEDIUM MODE  
+    hardMode.printing(app);                                             //HARD MODE
+    quitMode.printing(app);                                             //QUIT
+    minesweeperBoard.printing(app, boardXpos, boardYpos, tileLength);   //BOARD
+    flagsT.printing(app);                                               //FLAGS
+    timerT.printing(app);                                               //TIMER
+    if (minesweeperBoard.status()==board::won)                          //VICTORY
         victory.printing(app);
-    if (minesweeperBoard.status()==board::lost)                        //LOST
+    if (minesweeperBoard.status()==board::lost)                         //LOST
         detonated.printing(app);
     app.display();
 }
