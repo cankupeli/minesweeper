@@ -9,7 +9,7 @@
     The amount of available flags is shown above the board, the amount of total flags is equal to that of the amount of mines for the current mode.<br />
   **Flipping tiles**<br />
     Left clicking an unflagged and unflipped tile will flip it. <br />
-    If the tile is valueless, that is a tile with no surrounding bombs, the flipping will cascading and flip surrouding tiles until a numbered tile is flipped.<br />
+    If the tile is valueless, that is a tile with no surrounding bombs, the flipping will cascade and flip surrouding tiles until a numbered tile is flipped.<br />
 **Sound**<br />
   Each round is accompanied with a background soundtrack, a victory sound-affect upon victory and defeat sound-affect upon defeat. <br />
 **Timer**<br />
