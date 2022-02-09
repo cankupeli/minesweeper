@@ -5,7 +5,7 @@
 ## Functionality
   **Flags**<br />
     Using the right mouse click the user can flag a board tile as a potential bomb,<br />
-    this will be indicated with a flagged symbol and render the tile unflippable until it is unflipped.<br />
+    this will be indicated with a flagged symbol and render the tile unflippable until it is unflagged.<br />
     The amount of available flags is shown above the board, the amount of total flags is equal to that of the amount of mines for the current mode.<br />
   **Flipping tiles**<br />
     Left clicking an unflagged and unflipped tile will flip it. <br />
